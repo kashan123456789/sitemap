@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap</title>
+    <!-- <link rel="stylesheet" href="../home_page/style.css"> -->
+    <link rel="stylesheet" href="../fabrication/fabrication.css">
+    <link rel="stylesheet" href="../gallery/gallery.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      :root {
+        /* Your provided theme variables */
+        --blue-700: #1a397a; /* Primary Deep Blue */
+        --blue-500: #2f66d6;
+        --muted: #8892a0;
+        --bg: #f5f8fc; /* Light background */
+        --text-dark: #1f2937;
+        --text-light: #ffffff;
+        --card-bg: #ffffff;
+        --shadow-light: rgba(0, 0, 0, 0.08);
+        --shadow-strong: rgba(0, 0, 0, 0.15);
+        --glass-blur: 15px;
+        --particle-color: rgba(255, 255, 255, 0.2);
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* Applying base styles to the page
+      body {
+        font-family: var(--font-family);
+        background-color: var(--bg);
+        color: var(--text-dark);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+      } */
+
+      /* Sitemap Container */
+      .sitemap-container {
+        background-color: var(--card-bg);
+        border: 1px solid var(--shadow-light);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px var(--shadow-strong);
+        padding: 24px 30px;
+        width: 100%;
+        max-width: 400px; /* Good width for a "side" map */
+        box-sizing: border-box; /* Ensures padding is included in width */
+      }
+
+      .sitemap-container h2 {
+        color: var(--blue-700);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--shadow-light);
+        padding-bottom: 15px;
+      }
+
+      .sitemap-container ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .sitemap-container li {
+        margin-bottom: 14px;
+      }
+
+      .sitemap-container a,
+      .sitemap-container .missing-link {
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: color 0.2s ease;
+      }
+
+      .sitemap-container a i,
+      .sitemap-container .missing-link i {
+        font-size: 1.1em;
+        width: 20px; /* Aligns icons neatly */
+        text-align: center;
+      }
+
+      /* Top-level items */
+      .sitemap-container > ul > li > a {
+        color: var(--blue-700);
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      .sitemap-container > ul > li > a i {
+         color: var(--blue-700);
+      }
+      .sitemap-container > ul > li > a:hover {
+        color: var(--blue-500);
+      }
+
+      /* Nested items */
+      .sitemap-container ul ul {
+        padding-left: 32px; /* Indentation for hierarchy */
+        margin-top: 12px;
+        border-left: 2px solid var(--shadow-light);
+      }
+      
+      .sitemap-container ul ul a {
+        font-weight: 400;
+        font-size: 1rem;
+        color: var(--blue-500);
+      }
+      
+      .sitemap-container ul ul a i {
+         color: var(--muted);
+         font-size: 1em;
+      }
+      
+      .sitemap-container ul ul a:hover {
+         color: var(--blue-700);
+         text-decoration: underline;
+      }
+
+      /* Styles for links found in navbars but not provided as files */
+      .sitemap-container .missing-link {
+        color: var(--muted);
+        font-style: italic;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .sitemap-container .missing-link i {
+        color: var(--muted);
+        font-size: 1em;
+      }
+
+      /* --- Responsive adjustments for all screen types --- */
+      @media (max-width: 480px) {
+        body {
+            padding: 10px; /* Tighter padding on small screens */
+            display: block; /* Remove grid centering to allow natural flow */
+        }
+
+        .sitemap-container {
+            max-width: none; /* Allow it to fill the screen width */
+            padding: 20px 20px; /* Adjust padding for mobile */
+            box-shadow: 0 2px 8px var(--shadow-light); /* Lighter shadow */
+        }
+
+        .sitemap-container h2 {
+            font-size: 1.3rem; /* Slightly smaller title */
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* Top-level items */
+        .sitemap-container > ul > li > a {
+            font-size: 1rem;
+        }
+
+        /* Nested items */
+        .sitemap-container ul ul {
+            padding-left: 24px; /* Slightly less indent */
+        }
+        .sitemap-container ul ul a {
+            font-size: 0.95rem;
+        }
+      }
+      section {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+<section>
+    <!-- -----------------------------navbar--------------------------- -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="logo"><img src="../home_page/logo/petbot_logo.png" alt="" /></div>
+        <div class="menu-toggle" id="menu-toggle1">☰</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">GALLERY ▾</a>
+            <div class="dropdown-content">
+                 <a href="../gallery/gallery_pc.html">BOTTLES</a>
+              <a href="../gallery/gallery_pp.html">CONTAINERS</a>
+             
+              <a href="../gallery/gallery_pet.html">JARS</a>
+
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">FABRICATION ▾</a>
+            <div class="dropdown-content">
+              <a href="../fabrication/pet.html">POLYETHYLENE TEREPHTHALATE</a>
+              <a href="../fabrication/pc.html">POLYCARBONATE</a>
+              <a href="../fabrication/pp.html">Polypropylene</a>
+            </div>
+          </li>
+          
+          <li><a href="../aboutus/Aboutus.html">ABOUT US</a></li>
+          <!-- <li><a href="#">BLOG</a></li> -->
+            <li class="dropdown">
+            <a href="#">REACH OUT▾</a>
+            <div class="dropdown-content">
+              <a href="../contactus/contactus.html">Contact Us</a>
+              <a href="../contactus/Queries.html">Queries</a>
+              <a href="../contactus/feedback.html">Feedback</a>
+            </div>
+          </li>
+         <div class="search-container-uni123">
+            <button id="searchBtn-uni123" class="search-icon-uni123">
+              <i class="fa-solid fa-magnifying-glass gradient-icon-uni123"></i>
+            </button>
+            <input
+              type="text"
+              id="searchInput-uni123"
+              placeholder="Search..."
+            />
+          </div>
+        </ul>
+        <div class="nav-actions">
+          <div class="button-wrapper-567">
+    <div class="glow-aura-567"></div>
+    <a href="../login/Singup.html" class="btn-567">
+  <span class="btn-text">Sign in</span>
+  <!-- ✨ change icon class below for different styles -->
+  <i class="fa-solid fa-right-to-bracket btn-icon"></i>
+</a>
+
+
+    <svg class="svg-567" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad-567" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: var(--local-g1);" />
+          <stop offset="50%" style="stop-color: var(--local-g2);" />
+          <stop offset="100%" style="stop-color: var(--local-g3);" />
+        </linearGradient>
+      </defs>
+
+      <path class="path-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <path class="trail-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <circle class="dot-567" r="14" />
+    </svg>
+    <!-- <button>butto</button> -->
+  </div>
+ <div class="btn-order">
+<!-- https://feathericons.dev/?search=user&iconset=feather -->
+<a href="../login/login.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</svg></a>
+
+ </div>
+        <!-- <button class="btn-order">ORDER NOW</button> -->
+  
+        </div>
+      </div>
+    </nav>
+    <div class="sitemap-container">
+      <h2>Site Map</h2>
+      <ul>
+        <li>
+          <a href="#"><i class="fas fa-images"></i>Home_page</a>
+          <ul>
+            
+            
+            <li>
+              <a href="../index.html"><i class="fas fa-solid fa-house"></i>Home</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-images"></i>Gallery</a>
+          <ul>
+            <li>
+              <a href="../gallery/gallery_pc.html"><i class="fas fa-wine-bottle"></i>Bottles </a>
+            </li>
+            <li>
+              <a href="../gallery/gallery_pp.html"><i class="fas fa-box"></i>Containers </a>
+            </li>
+            <li>
+              <a href="../gallery/gallery_pp.html"><i class="fas fa-glass-martini-alt"></i>Jars </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-cogs"></i>Fabrication</a>
+          <ul>
+            <li>
+              <a href="../fabrication/pet.html"><i class="fas fa-atom"></i>Polyethylene (PET)</a>
+            </li>
+            <li>
+              <a href="../fabrication/pc.html"><i class="fas fa-atom"></i>Polycarbonate (PC)</a>
+            </li>
+            <li>
+              <a href="../fabrication/pp.html"><i class="fas fa-atom"></i>Polypropylene (PP)</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-headset"></i>About</a>
+          <ul>
+            <li>
+              <a href="../aboutus/Aboutus.html"><i class="fas fa-solid fa-address-card"></i>About Us</a>
+            </li>
+          
+            
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-headset"></i>Reach Out</a>
+          <ul>
+            <li>
+              <a href="../contactus/contactus.html"><i class="fas fa-envelope"></i>Contact Us</a>
+            </li>
+            <li>
+              <a href="../contactus/Queries.html"><i class="fas fa-question-circle"></i>Queries</a>
+            </li>
+            <li>
+               <a href="../contactus/feedback.html"><i class="fas fa-comment-dots"></i>Feedback</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-user-circle"></i>Account</a>
+          <ul>
+            <li>
+              <a href="../login/login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+            </li>
+            <li>
+              <a href="../login/Singup.html"><i class="fas fa-user-plus"></i>Sign Up</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </section>
+ <!-- -----------------------------Footer--------------------------- -->
+    <footer>
+      <div class="newsletter">
+        <h3>Subscribe for New arrivals and discounts</h3>
+        <input type="email" placeholder="Your email address" />
+        <button>➤</button>
+      </div>
+
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-logo"><img src="../home_page/logo/petbot_logo.png" alt=""></div>
+          <p>
+           <i class="fa-solid fa-phone"></i> (0) 123456789<br/><i class="fa-solid fa-location-dot"></i>North Karachi <br/><i class="fa-solid fa-envelope"></i>name@yourmail.com
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-linkedin linkdin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>MAIN</h4>
+          <ul>
+            <li><a href="../index.html">Home_page</a></li>
+            <li><a href="../aboutus/Aboutus.html">About_us</a></li>
+            <li><a href="../aside/aside.html">side_map</a></li>
+            <!-- <li><a href="#">Water Testing</a></li>
+            <li><a href="#">System Repair</a></li>
+            <li><a href="#">Water Testing</a></li> -->
+          </ul>
+            <h4>Get started</h4>
+          <ul>
+            <li><a href="../login/Singup.html">Sign_up</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <!-- <li><a href="./gallery/gallery_pp.html">Conatiners</a></li> -->
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../gallery/gallery_pc.html">Bottles</a></li>
+            <li><a href="../gallery/gallery_pet.html">Jars</a></li>
+            <li><a href="../gallery/gallery_pp.html">Conatiners</a></li>
+           
+          </ul>
+<h4>Contact</h4>
+          <ul>
+            <li><a href="../contactus/contactus.html">Contact_us</a></li>
+            <li><a href="../contactus/Queries.html">Queries</a></li>
+            <li><a href="../contactus/feedback.html">Feedback</a></li>
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>manufacturing process</h4>
+          <ul>
+            <li><a href="../fabrication/pc.html">PC (Polyethylene terephthalate)</a></li>
+            <li><a href="../fabrication/pp.html">PP (Polypropylene)</a></li>
+            <li><a href="../fabrication/pet.html">PET (Polyethylene terephthalate)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+  
+    </footer>
+<script src="./script.js"></script>
+<script src="./gallery.js"></script>
+<script src="../fabrication/fabrication.js"></script>
+<script src="../home_page/script.js"></script>
+
+</body>
+</html>

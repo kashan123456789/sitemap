@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../gallery/gallery.css">
+
+    <link rel="stylesheet" href="../home_page/style.css">
+    <link rel="stylesheet" href="../fabrication/fabrication.css">
+        <style>
+        /* Base Styles and Variables */
+:root {
+    --primary-color: #4A90E2; /* A shade of blue for buttons, links, etc. */
+    --secondary-color: #E6F0FF; /* Light blue for backgrounds/highlights */
+    --text-color-dark: #333;
+    --text-color-light: #666;
+    --background-color: #F8F9FA;
+    --white: #fff;
+    --border-radius-large: 12px;
+    --border-radius-small: 6px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    /* line-height: 1.6; */
+    color: var(--text-color-dark);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+    /* padding: 20px; */
+}
+
+/* --- Main Container Layout --- */
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Ensures borders/shadows are clean */
+    top: 40px;
+    position: relative;
+}
+
+/* --- Left Section: Contact Info --- */
+
+.info-section {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info-title {
+    font-size: 14px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.header-box h1 {
+    font-size: 2.5rem;
+    color: var(--text-color-dark);
+    margin-bottom: 10px;
+}
+
+.header-box p {
+    color: var(--text-color-light);
+    font-size: 1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--white);
+    border-radius: var(--border-radius-small);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.response-time-box {
+    /* Special styling for the Response Time box, if needed */
+    /* Example: making it slightly more prominent */
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.detail-box .icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    padding: 10px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-small);
+}
+
+.detail-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.detail-content {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+}
+
+/* Why Choose Us section */
+.why-choose-us {
+    padding-top: 20px;
+    border-top: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.choose-us-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.why-choose-us ul li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-color-light);
+}
+
+.check-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.bullet-text {
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+
+/* --- Right Section: Contact Form --- */
+
+.form-section {
+    flex: 1.5;
+    padding: 40px;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.form-description {
+    color: var(--text-color-light);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.dual-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-color-dark);
+}
+
+input:not([type="submit"]),
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-small);
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.send-query-btn {
+    align-self: flex-end; /* Aligns button to the right/bottom of the form */
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius-small);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.send-query-btn:hover {
+    background-color: #3b7ad0; /* Slightly darker shade on hover */
+}
+
+.send-query-btn:active {
+    transform: scale(0.99);
+}
+
+/* --- Responsiveness: Mobile and Tablet Layout --- */
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column; /* Stacks sections vertically */
+        max-width: 600px;
+    }
+
+    .info-section, .form-section {
+        padding: 30px;
+    }
+
+    .header-box h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .info-section, .form-section {
+        padding: 25px 20px;
+    }
+    
+    .dual-group {
+        flex-direction: column; /* Stacks Name and Email fields vertically */
+        gap: 20px;
+    }
+
+    .send-query-btn {
+        width: 100%; /* Full width button on small screens */
+        justify-content: center;
+    }
+}
+/* Add to the top of your style.css */
+input, textarea, button, .detail-box, .send-query-btn {
+    transition: all 0.3s ease-in-out; /* Smooth transition for color, shadow, transform, etc. */
+}
+/* Before:
+.detail-box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--white);
+    border-radius: var(--border-radius-small);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+*/
+
+/* Add Hover Effect */
+.detail-box:hover {
+    transform: translateY(-3px); /* Lifts the box up slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Increases shadow intensity */
+    cursor: pointer;
+}
+/* Before:
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+*/
+
+/* Enhanced Focus/Animation */
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    /* Animated box-shadow pulse */
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.3); 
+}
+/* Before:
+.send-query-btn:hover {
+    background-color: #3b7ad0;
+}
+
+.send-query-btn:active {
+    transform: scale(0.99);
+}
+*/
+
+/* Enhanced Button Effects */
+.send-query-btn {
+    /* ... existing styles ... */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.send-query-btn:hover {
+    background-color: #3b7ad0; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Lifted shadow on hover */
+}
+
+.send-query-btn:active {
+    background-color: #2e60a3; /* Darker on press */
+    transform: scale(0.98); /* More noticeable press */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Flat shadow on press */
+}
+.whole{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+    /* --- Background Video Styles --- */
+#bgVideo {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 50%;
+    left: 50%;
+    /* Centers the video */
+    transform: translate(-50%, -50%); 
+    
+    /* Ensures the video covers the entire viewport */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Pushes it way into the background */
+    
+    /* Helps prevent blur/jagged edges on some systems */
+    object-fit: cover; 
+    background-color: #000; /* Fallback background color */
+    filter: brightness(60%);
+    filter: blur( 100%);
+}
+
+/* --- Content Wrapper for Centering --- */
+.content-wrapper {
+    /* Takes up the remaining space, allowing content to center */
+    flex: 1; 
+    
+    /* Replaces the old body centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Needed for z-index layering */
+    z-index: 1; /* Ensures content is above the video */
+    
+    /* Use padding to ensure content doesn't touch the screen edges */
+    padding: 20px; 
+}
+
+/* --- Video Overlay for Readability --- */
+.content-wrapper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A subtle dark transparent layer over the video */
+    /* background: rgba(0, 0, 0, 0.4);  */
+    z-index: -1; /* Above the video but below the content */
+}
+
+/* --- BODY Fixes --- */
+body {
+    /* Set dimensions for the fixed positioning to work correctly */
+    min-height: 100vh;
+    width: 100vw; 
+    overflow-x: hidden; /* Prevent horizontal scrollbar from video stretching */
+    
+    /* Remove the old centering styles from body */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center;  */
+    
+    /* The main contact-container will now be centered by .content-wrapper */
+}
+    </style>
+  </head>
+
+  <body>
+   <!-- -----------------------------navbar--------------------------- -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="logo"><img src="../home_page/logo/petbot_logo.png" alt="" /></div>
+        <div class="menu-toggle" id="menu-toggle1">☰</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">GALLERY ▾</a>
+            <div class="dropdown-content">
+                 <a href="../gallery/gallery_pc.html">BOTTLES</a>
+              <a href="../gallery/gallery_pp.html">CONTAINERS</a>
+             
+              <a href="../gallery/gallery_pet.html">JARS</a>
+
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">FABRICATION ▾</a>
+            <div class="dropdown-content">
+              <a href="../fabrication/pet.html">POLYETHYLENE TEREPHTHALATE</a>
+              <a href="../fabrication/pc.html">POLYCARBONATE</a>
+              <a href="../fabrication/pp.html">Polypropylene</a>
+            </div>
+          </li>
+          
+          <li><a href="../aboutus/Aboutus.html">ABOUT US</a></li>
+          <!-- <li><a href="#">BLOG</a></li> -->
+            <li class="dropdown">
+            <a href="#">REACH OUT▾</a>
+            <div class="dropdown-content">
+              <a href="../contactus/contactus.html">Contact Us</a>
+              <a href="../contactus/Queries.html">Queries</a>
+              <a href="../contactus/feedback.html">Feedback</a>
+            </div>
+          </li>
+         <div class="search-container-uni123">
+            <button id="searchBtn-uni123" class="search-icon-uni123">
+              <i class="fa-solid fa-magnifying-glass gradient-icon-uni123"></i>
+            </button>
+            <input
+              type="text"
+              id="searchInput-uni123"
+              placeholder="Search..."
+            />
+          </div>
+        </ul>
+        <div class="nav-actions">
+          <div class="button-wrapper-567">
+    <div class="glow-aura-567"></div>
+    <a href="../login/Singup.html" class="btn-567">
+  <span class="btn-text">Sign in</span>
+  <!-- ✨ change icon class below for different styles -->
+  <i class="fa-solid fa-right-to-bracket btn-icon"></i>
+</a>
+
+
+    <svg class="svg-567" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad-567" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: var(--local-g1);" />
+          <stop offset="50%" style="stop-color: var(--local-g2);" />
+          <stop offset="100%" style="stop-color: var(--local-g3);" />
+        </linearGradient>
+      </defs>
+
+      <path class="path-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <path class="trail-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <circle class="dot-567" r="14" />
+    </svg>
+    <!-- <button>butto</button> -->
+  </div>
+ <div class="btn-order">
+<!-- https://feathericons.dev/?search=user&iconset=feather -->
+<a href="../login/login.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</svg></a>
+
+ </div>
+        <!-- <button class="btn-order">ORDER NOW</button> -->
+  
+        </div>
+      </div>
+    </nav>
+    
+    <section class="whole">
+    <!-- -----------------------------hero--------------------------- -->
+      <!-- ======== BACKGROUND VIDEO ======== -->
+ <body>
+    <video autoplay loop muted playsinline id="bgVideo">
+        <source src="./video/mp 4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content-wrapper">
+        <div class="contact-container">
+            <section class="info-section">
+                <h2 class="contact-info-title">Contact Information</h2>
+                <div class="header-box">
+                    <h1>Let's Connect</h1>
+                    <p>Whether you have a question about our pet bottles, products, or anything else, our team is ready to answer all your questions.</p>
+                </div>
+
+                <div class="contact-details">
+                    <div class="detail-box">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <div>
+                            <h3 class="detail-title">Email Us</h3>
+                            <p class="detail-content">support@petbot.com</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <i class="fa-solid fa-phone icon"></i>
+                        <div>
+                            <h3 class="detail-title">Call Us</h3>
+                            <p class="detail-content">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-box response-time-box">
+                        <i class="fa-solid fa-clock icon"></i>
+                        <div>
+                            <h3 class="detail-title">Response Time</h3>
+                            <p class="detail-content">Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-choose-us">
+                    <h3 class="choose-us-title">Why Choose Us?</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check check-icon"></i> <span class="bullet-text">Expert team with 10+ years experience</span></li>
+                        <li><i class="fa-solid fa-check check-icon"></i> <span class="bullet-text">10,000+ satisfied pet owners</span></li>
+                        <li><i class="fa-solid fa-check check-icon"></i> <span class="bullet-text">Premium quality guaranteed</span></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="form-section">
+                <h2>Send Us a Message</h2>
+                <p class="form-description">Fill out the form below and we'll get back to you shortly</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group dual-group">
+                        <div class="input-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your query..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="send-query-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Query
+                    </button>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</section>
+     <!-- -----------------------------Footer--------------------------- -->
+    <footer>
+      <div class="newsletter">
+        <h3>Subscribe for New arrivals and discounts</h3>
+        <input type="email" placeholder="Your email address" />
+        <button>➤</button>
+      </div>
+
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-logo"><img src="../home_page/logo/petbot_logo.png" alt=""></div>
+          <p>
+           <i class="fa-solid fa-phone"></i> (0) 123456789<br/><i class="fa-solid fa-location-dot"></i>North Karachi <br/><i class="fa-solid fa-envelope"></i>name@yourmail.com
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-linkedin linkdin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>MAIN</h4>
+          <ul>
+            <li><a href="../index.html">Home_page</a></li>
+            <li><a href="../aboutus/Aboutus.html">About_us</a></li>
+            <li><a href="../aside/aside.html">side_map</a></li>
+            <!-- <li><a href="#">Water Testing</a></li>
+            <li><a href="#">System Repair</a></li>
+            <li><a href="#">Water Testing</a></li> -->
+          </ul>
+            <h4>Get started</h4>
+          <ul>
+            <li><a href="../login/Singup.html">Sign_up</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <!-- <li><a href="./gallery/gallery_pp.html">Conatiners</a></li> -->
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../gallery/gallery_pc.html">Bottles</a></li>
+            <li><a href="../gallery/gallery_pet.html">Jars</a></li>
+            <li><a href="../gallery/gallery_pp.html">Conatiners</a></li>
+           
+          </ul>
+<h4>Contact</h4>
+          <ul>
+            <li><a href="../contactus/contactus.html">Contact_us</a></li>
+            <li><a href="../contactus/Queries.html">Queries</a></li>
+            <li><a href="../contactus/feedback.html">Feedback</a></li>
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>manufacturing process</h4>
+          <ul>
+            <li><a href="../fabrication/pc.html">PC (Polyethylene terephthalate)</a></li>
+            <li><a href="../fabrication/pp.html">PP (Polypropylene)</a></li>
+            <li><a href="../fabrication/pet.html">PET (Polyethylene terephthalate)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+  
+    </footer>
+
+
+
+    <!-- -----------------------------our services--------------------------- -->
+
+    <script src="../home_page/script.js"></script>
+    <script src="../fabrication/fabrication.js"></script>
+    <script src="./script.js"></script>
+    <script>
+       const searchBtnUni = document.getElementById("searchBtn-uni123");
+      const searchInputUni = document.getElementById("searchInput-uni123");
+      const gradientIconUni = document.querySelector(".gradient-icon-uni123");
+     // Expand input on button click
+      searchBtnUni.addEventListener("click", () => {
+        searchInputUni.classList.add("active");
+        searchInputUni.focus();
+      });
+
+      // Collapse input on blur
+      searchInputUni.addEventListener("blur", () => {
+        searchInputUni.classList.remove("active");
+      });
+
+      // Change gradient animation speed on icon click
+      gradientIconUni.addEventListener("click", () => {
+        gradientIconUni.style.animationDuration =
+          gradientIconUni.style.animationDuration === "2s" ? "5s" : "2s";
+      });
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // In a real application, you would gather form data and send it to a server:
+        // const formData = new FormData(form);
+        // fetch('/api/contact', { method: 'POST', body: formData })
+        //   .then(response => response.json())
+        //   .then(data => alert('Message Sent Successfully!'))
+        //   .catch(error => console.error('Error:', error));
+
+        // For this example, we'll just show an alert
+        const name = document.getElementById('name').value;
+        
+        alert(`Thank you, ${name}! Your query has been sent. We will get back to you within 24 hours.`);
+
+        // Optionally clear the form after successful submission
+        form.reset();
+    });
+});
+    </script>
+  </body>
+</html>

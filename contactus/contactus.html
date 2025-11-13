@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetBot Contact Page - Map Fix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../home_page/style.css">
+    <link rel="stylesheet" href="../fabrication/fabrication.css">
+    <link rel="stylesheet" href="../gallery/gallery.css">
+
+    <style>
+        /* --- Professional Design Variables --- */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --text-color: #343a40;
+            --light-text: #6c757d;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --border-color: #e9ecef;
+            --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --success-color: #28a745; 
+            --spacing-large: 35px;
+            --border-radius: 6px;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* --- Global Layout/Header/Stats --- */
+        .header-connect {
+            text-align: center;
+            padding: 10px 0 50px;
+        }
+        .header-connect h1 {
+            font-size: 3.2em;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .header-connect p {
+            font-size: 1.1em;
+            color: var(--light-text);
+            margin-top: 10px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px; 
+            margin-bottom: 60px;
+            flex-wrap: wrap; 
+        }
+        .stat-item {
+            background-color: var(--card-background);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--border-color);
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-radius:20px;
+
+        }
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+        .stat-icon {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        .stat-description {
+            font-size: 1em;
+            color: var(--light-text);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* --- Main Contact Grid --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; 
+            gap: 50px;
+            background-color: var(--card-background);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* --- Form Aesthetics --- */
+        .section-header { margin-bottom: 30px; }
+        .form-row { display: flex; gap: 25px; margin-bottom: 25px; }
+        .form-group { flex: 1; position: relative; }
+        .form-group label {
+            font-size: 0.8em; font-weight: 600; color: var(--light-text);
+            padding: 0 8px; top: -10px; position: absolute; background: var(--card-background); z-index: 10;
+        }
+        .form-group input, .form-group textarea {
+            padding: 15px 15px; border: 1px solid var(--border-color); border-radius: var(--border-radius);
+            background-color: var(--card-background); transition: border-color 0.3s, box-shadow 0.3s; font-size: 1.05em;
+            width: 100%; box-sizing: border-box; resize: vertical;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary-color); box-shadow: 0 0 0 1px var(--primary-color); outline: none;
+        }
+        .form-group textarea { min-height: 150px; }
+        .send-button {
+            background-color: var(--primary-color); padding: 18px 25px; border-radius: var(--border-radius);
+            font-size: 1.1em; font-weight: 600; transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); width: 100%; border: none; color: white; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .send-button:hover { background-color: var(--secondary-color); box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5); }
+        
+        .why-choose { margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .why-list i { color: var(--success-color); margin-right: 15px; font-size: 1.1em; }
+
+        /* --- MAP STYLES (FIXED) --- */
+        .find-us { margin-top: var(--spacing-large); padding-top: var(--spacing-large); border-top: 1px solid var(--border-color); }
+        .find-us .map-container { 
+            height: 300px; 
+            border-radius: var(--border-radius); 
+            border: 1px solid var(--border-color); 
+            box-shadow: var(--shadow-subtle); 
+            overflow: hidden; 
+            position: relative; 
+        }
+        /* New rule for the embedded map */
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0; /* Ensures no default iframe border is visible */
+            display: block;
+        }
+        .map-overlay { background: rgba(255, 255, 255, 0.9); font-size: 0.9em; padding: 15px; border-radius: var(--border-radius); box-shadow: var(--shadow-medium); position: absolute; top: 15px; left: 15px; max-width: 300px; pointer-events: none; }
+
+
+        /* --- Contact Info / FAQ Styles --- */
+        .contact-info { display: flex; flex-direction: column; gap: 20px; }
+        .info-card {
+            background-color: var(--card-background); 
+            border: 1px solid var(--border-color); 
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: none; 
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .info-card:hover {
+            background-color: #fcfcfc;
+            border-color: var(--primary-color); 
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.1); 
+        }
+        .info-card h3 {
+            font-size: 1.25em;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .info-card h3 i {
+            font-size: 1.5em;
+            margin-right: 15px;
+            color: var(--primary-color); 
+        }
+        .info-card p {
+            margin: 5px 0;
+            padding-left: 40px; 
+            color: var(--text-color);
+            font-size: 1em;
+        }
+        .info-card a {
+            font-weight: 500;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .info-card a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        .detail-line { color: var(--light-text) !important; font-size: 0.95em !important; }
+        
+        .faq-card {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            box-shadow: none;
+            overflow: hidden;
+        }
+        .faq-card h3 {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+        .faq-question {
+            padding: 18px 20px;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-question:hover { background-color: var(--background-color); }
+        .faq-answer {
+            display: none;
+            padding: 0 20px 15px;
+            color: var(--light-text);
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #fcfcfc;
+        }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        
+        /* --- Media Queries --- */
+        @media (max-width: 992px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; padding: 30px; }
+            .form-row { flex-direction: column; }
+        }
+        @media (max-width: 576px) {
+            .container { padding: 30px 15px; }
+            .stat-item { flex-basis: 45%; }
+        }
+        .available {
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .available h5{
+            margin: 0;
+            font-size: 0.9em;
+             background-color: #333; 
+            width: fit-content;
+            padding: 9px;
+            border-radius: 48px;
+        }
+    </style>
+</head>
+<body>
+   <!-- -----------------------------navbar--------------------------- -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="logo"><img src="../home_page/logo/petbot_logo.png" alt="" /></div>
+        <div class="menu-toggle" id="menu-toggle1">☰</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">GALLERY ▾</a>
+            <div class="dropdown-content">
+                 <a href="../gallery/gallery_pc.html">BOTTLES</a>
+              <a href="../gallery/gallery_pp.html">CONTAINERS</a>
+             
+              <a href="../gallery/gallery_pet.html">JARS</a>
+
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">FABRICATION ▾</a>
+            <div class="dropdown-content">
+              <a href="../fabrication/pet.html">POLYETHYLENE TEREPHTHALATE</a>
+              <a href="../fabrication/pc.html">POLYCARBONATE</a>
+              <a href="../fabrication/pp.html">Polypropylene</a>
+            </div>
+          </li>
+          
+          <li><a href="../aboutus/Aboutus.html">ABOUT US</a></li>
+          <!-- <li><a href="#">BLOG</a></li> -->
+            <li class="dropdown">
+            <a href="#">REACH OUT▾</a>
+            <div class="dropdown-content">
+              <a href="../contactus/contactus.html">Contact Us</a>
+              <a href="../contactus/Queries.html">Queries</a>
+              <a href="../contactus/feedback.html">Feedback</a>
+            </div>
+          </li>
+         <div class="search-container-uni123">
+            <button id="searchBtn-uni123" class="search-icon-uni123">
+              <i class="fa-solid fa-magnifying-glass gradient-icon-uni123"></i>
+            </button>
+            <input
+              type="text"
+              id="searchInput-uni123"
+              placeholder="Search..."
+            />
+          </div>
+        </ul>
+        <div class="nav-actions">
+          <div class="button-wrapper-567">
+    <div class="glow-aura-567"></div>
+    <a href="../login/Singup.html" class="btn-567">
+  <span class="btn-text">Sign in</span>
+  <!-- ✨ change icon class below for different styles -->
+  <i class="fa-solid fa-right-to-bracket btn-icon"></i>
+</a>
+
+
+    <svg class="svg-567" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad-567" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: var(--local-g1);" />
+          <stop offset="50%" style="stop-color: var(--local-g2);" />
+          <stop offset="100%" style="stop-color: var(--local-g3);" />
+        </linearGradient>
+      </defs>
+
+      <path class="path-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <path class="trail-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <circle class="dot-567" r="14" />
+    </svg>
+    <!-- <button>butto</button> -->
+  </div>
+ <div class="btn-order">
+<!-- https://feathericons.dev/?search=user&iconset=feather -->
+<a href="../login/login.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</svg></a>
+
+ </div>
+        <!-- <button class="btn-order">ORDER NOW</button> -->
+  
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style=" position: relative; top: 100px;">
+        <div class="header-connect">
+            <span class="available"><h5>🌟Available 24/7</h5></span>
+            <h1>Let's Connect</h1>
+            <p>Your trusted partner for premium bottle packaging solutions. We're here to help bring your vision to life.</p>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-value">500+</div>
+                <div class="stat-description">Clients Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-history"></i></div>
+                <div class="stat-value">15+</div>
+                <div class="stat-description">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                <div class="stat-value">25+</div>
+                <div class="stat-description">Countries</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-star"></i></div>
+                <div class="stat-value">98%</div>
+                <div class="stat-description">Satisfaction</div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="left-column">
+                
+                <div class="send-message">
+                    <div class="section-header">
+                        <span class="icon " style="color: var(--secondary-color) ; font-size: 2em;"><i class="fas fa-envelope-open-text"></i></span>
+                        <div>
+                            <h2>Send us a  <span style="color: var(--secondary-color);"> Message </span></h2>
+                            <p style="color: var(--light-text); font-size: 0.95em;">We typically respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number *</label>
+                                <input type="tel" id="phone-number" placeholder="+92 XXX XXXXXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email-address">Email Address *</label>
+                                <input type="email" id="email-address" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" placeholder="How can we help you?">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="your-message">Your Message</label>
+                                <textarea id="your-message" placeholder="Tell us about your project or inquiry..."></textarea>
+                                <div class="char-count">0/1000 characters</div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="send-button">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="why-choose">
+                    <h3>Why Choose PetBot?</h3>
+                    <ul class="why-list">
+                        <li><i class="fas fa-check-circle"></i> Industry-leading quality standards</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive pricing & bulk discounts</li>
+                        <li><i class="fas fa-check-circle"></i> Custom solutions for your needs</li>
+                        <li><i class="fas fa-check-circle"></i> Fast delivery & reliable service</li>
+                    </ul>
+                </div>
+                
+                <div class="find-us">
+                    <div class="section-header">
+                        <span class="icon"><i class="fas fa-map-marked-alt"></i></span>
+                        <div>
+                            <h2>Find Us Here</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7233.0684044975205!2d67.05959862872176!3d24.981957763220407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1760724186082!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <div class="map-overlay">
+                            <p class="address-line" style="color: var(--secondary-color); font-weight: 600;">Aptech Computer Education</p>
+                            <p>A-563, Main Shahrah-e-Juman, Karachi, 75850</p>
+                            <p><span class="views" style="color: var(--primary-color);">4.4 &#9733; 672 reviews</span> | <a href="#">View larger map</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="contact-info">
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Visit Our Office</h3>
+                    <p>Aptech Computer Education</p>
+                    <p>North Karachi Center, Karachi</p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+                    <p>+92 XXX XXXXXXX</p>
+                    <p class="detail-line">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <p><a href="mailto:info@petbot.com">info@petbot.com</a></p>
+                    <p><a href="mailto:sales@petbot.com">sales@petbot.com</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                    <p class="detail-line">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                    <p class="detail-line">Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Frequently Asked Questions</h3>
+                    <p style="padding: 0 20px 15px; margin-top: -10px; color: var(--light-text); font-size: 0.9em;">Quick answers to common questions</p>
+
+                    <div class="faq-list">
+                        <div class="faq-item active">
+                            <div class="faq-question">What types of bottles do you offer?<i class="fas fa-chevron-up"></i></div>
+                            <div class="faq-answer">We offer a wide range of plastic and glass bottles, including PET, HDPE, and PP, for various industries.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What is the minimum order quantity?<i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer">Our standard MOQ is 5,000 units, but this can vary depending on the product and customization.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Do you offer custom branding?<i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer">Yes, we provide comprehensive custom branding services including screen printing, labeling, and embossing.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">What is the typical delivery time?<i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer">Standard orders are typically delivered within 4-6 weeks. Custom orders may take longer.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+       <!-- -----------------------------Footer--------------------------- -->
+    <footer>
+      <div class="newsletter">
+        <h3>Subscribe for New arrivals and discounts</h3>
+        <input type="email" placeholder="Your email address" />
+        <button>➤</button>
+      </div>
+
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-logo"><img src="../home_page/logo/petbot_logo.png" alt=""></div>
+          <p>
+           <i class="fa-solid fa-phone"></i> (0) 123456789<br/><i class="fa-solid fa-location-dot"></i>North Karachi <br/><i class="fa-solid fa-envelope"></i>name@yourmail.com
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-linkedin linkdin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>MAIN</h4>
+          <ul>
+            <li><a href="../index.html">Home_page</a></li>
+            <li><a href="../aboutus/Aboutus.html">About_us</a></li>
+            <li><a href="../aside/aside.html">side_map</a></li>
+            <!-- <li><a href="#">Water Testing</a></li>
+            <li><a href="#">System Repair</a></li>
+            <li><a href="#">Water Testing</a></li> -->
+          </ul>
+            <h4>Get started</h4>
+          <ul>
+            <li><a href="../login/Singup.html">Sign_up</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <!-- <li><a href="./gallery/gallery_pp.html">Conatiners</a></li> -->
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../gallery/gallery_pc.html">Bottles</a></li>
+            <li><a href="../gallery/gallery_pet.html">Jars</a></li>
+            <li><a href="../gallery/gallery_pp.html">Conatiners</a></li>
+           
+          </ul>
+<h4>Contact</h4>
+          <ul>
+            <li><a href="../contactus/contactus.html">Contact_us</a></li>
+            <li><a href="../contactus/Queries.html">Queries</a></li>
+            <li><a href="../contactus/feedback.html">Feedback</a></li>
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>manufacturing process</h4>
+          <ul>
+            <li><a href="../fabrication/pc.html">PC (Polyethylene terephthalate)</a></li>
+            <li><a href="../fabrication/pp.html">PP (Polypropylene)</a></li>
+            <li><a href="../fabrication/pet.html">PET (Polyethylene terephthalate)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+  
+    </footer>
+
+
+
+    <!-- -----------------------------our services--------------------------- -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const parentItem = question.closest('.faq-item');
+                    const isActive = parentItem.classList.contains('active');
+
+                    // Close all other open items
+                    document.querySelectorAll('.faq-item.active').forEach(item => {
+                        if (item !== parentItem) {
+                            item.classList.remove('active');
+                            item.querySelector('.fas').classList.remove('fa-chevron-up');
+                            item.querySelector('.fas').classList.add('fa-chevron-down');
+                        }
+                    });
+
+                    // Toggle the clicked item
+                    if (isActive) {
+                        parentItem.classList.remove('active');
+                        question.querySelector('.fas').classList.remove('fa-chevron-up');
+                        question.querySelector('.fas').classList.add('fa-chevron-down');
+                    } else {
+                        parentItem.classList.add('active');
+                        question.querySelector('.fas').classList.remove('fa-chevron-down');
+                        question.querySelector('.fas').classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+         const searchBtnUni = document.getElementById("searchBtn-uni123");
+      const searchInputUni = document.getElementById("searchInput-uni123");
+      const gradientIconUni = document.querySelector(".gradient-icon-uni123");
+     // Expand input on button click
+      searchBtnUni.addEventListener("click", () => {
+        searchInputUni.classList.add("active");
+        searchInputUni.focus();
+      });
+
+      // Collapse input on blur
+      searchInputUni.addEventListener("blur", () => {
+        searchInputUni.classList.remove("active");
+      });
+
+      // Change gradient animation speed on icon click
+      gradientIconUni.addEventListener("click", () => {
+        gradientIconUni.style.animationDuration =
+          gradientIconUni.style.animationDuration === "2s" ? "5s" : "2s";
+      });
+    </script>
+    <script src="../fabrication/fabrication.js"></script>
+<script src="./script.js"></script>
+
+    <script src="../home_page/script.js"></script>
+</body>
+</html>

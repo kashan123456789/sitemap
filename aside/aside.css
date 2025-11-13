@@ -1,0 +1,267 @@
+/* --------------------------Colors & Fonts-------------------------- */
+:root {
+  --blue-700: #1a397a; /* Primary Deep Blue */
+  --blue-500: #2f66d6;
+/* //  --accent: #ff6a00; Rich Orange for contrast */
+  --muted: #8892a0;
+  --bg: #f5f8fc; /* Light background */
+  --text-dark: #1f2937;
+  --text-light: #ffffff;
+  --card-bg: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+  --glass-blur: 15px;
+  --particle-color: rgba(255, 255, 255, 0.2);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+
+  /* From Uiverse.io by ElSombrero2 */ 
+/* .card92 {
+  width: 190px;
+  height: 254px;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+}
+
+.card92 .content92 {
+  border-radius: 5px;
+  background: #171717;
+  width: 186px;
+  height: 250px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content92::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: " ";
+  display: block;
+  background: white;
+  width: 5px;
+  height: 50px;
+  position: absolute;
+  filter: blur(50px);
+  overflow: hidden;
+}
+
+.card92:hover .content92::before {
+  opacity: 1;
+}
+
+.card92::before {
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 360px;
+  background: linear-gradient(#ff2288, #387ef0);
+  transition: opacity 300ms;
+  animation: rotation_9018 8000ms infinite linear;
+  animation-play-state: paused;
+}
+
+.card92:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.card92::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 250px;
+  height: 360px;
+  background: #17171733;
+  backdrop-filter: blur(50px);
+}
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+.aside_section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+}
+/* From Uiverse.io by javierBarroso */ 
+.card92 {
+  width: 300px;
+  height: 357px;
+  /* background: #171717; */
+background: linear-gradient(
+  135deg,
+  #0a1a3f 0%,   /* almost navy */
+  #102e6b 25%,  /* deep royal blue */
+  #1a397a 50%,  /* your var(--blue-700) */
+  #2f66d6 80%,  /* your var(--blue-500) */
+  #1e3fae 100%  /* rich electric blue */
+);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card92 .content92 {
+  border-radius: 10px;
+  /* background: #171717; */
+background: linear-gradient(
+  135deg,
+  #0a1a3f 0%,   /* almost navy */
+  #102e6b 25%,  /* deep royal blue */
+  #1a397a 50%,  /* your var(--blue-700) */
+  #2f66d6 80%,  /* your var(--blue-500) */
+  #1e3fae 100%  /* rich electric blue */
+);
+
+
+  width: 294px;
+  height: 347px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.content92::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: " ";
+  display: block;
+  background: #fff5;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  filter: blur(50px);
+}
+
+.card92:hover .content92::before {
+  opacity: 1;
+}
+
+.card92::before {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 300px;
+  transform: rotate(0deg) translateY(50%);
+  background: linear-gradient(90deg, #ff2288, transparent);
+  transition: opacity 300ms;
+  animation: rotation_9018 3000ms infinite linear;
+  animation-play-state: paused;
+}
+.card92::after {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 300px;
+  transform: rotate(0deg) translateY(-50%);
+  background: linear-gradient(90deg, transparent, #2268ff);
+  transition: opacity 300ms;
+  animation: rotation_9019 3000ms infinite linear;
+  animation-play-state: paused;
+}
+
+.card92:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+.card92:hover::after {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.card92:hover .glass92 {
+  opacity: 0;
+}
+
+.glass92 {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 190px;
+  height: 254px;
+  background: #17171733;
+  backdrop-filter: blur(50px);
+  z-index: 1;
+  transition-duration: 0.5s;
+}
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg) translateY(50%);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(50%);
+  }
+}
+@keyframes rotation_9019 {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+.content92 ul {
+    list-style:circle;
+    padding: 0;
+    margin: 0;
+    
+ 
+}
+.content92 ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.content92 ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.links92{
+    margin-top: 15px;
+    display: flex;
+    margin-left: 20px;
+    gap: 15px;
+    width: 100%;
+
+}

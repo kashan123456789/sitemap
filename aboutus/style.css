@@ -1,0 +1,559 @@
+.left {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  animation: slideRight 7s infinite;
+  white-space: nowrap;
+}
+@keyframes slideRight {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+.quote {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  color: #0f92e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --blue-700: #264aa6;
+  --blue-500: #2f66d6;
+  --accent: #1e3fa6;
+  --muted: #6b7280;
+  --bg: #f6fbff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+/* General Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Using Inter font as per general instructions, with fallbacks */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* --- Global Utility Classes --- */
+.main_container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content_section_padding {
+  padding: 80px 0; /* Aesthetic vertical spacing */
+}
+
+.light_background_section {
+  background-color: #f8f8f8;
+}
+
+.section_title_style {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  color: #004a80; /* Deep Corporate Blue */
+  margin-bottom: 15px;
+}
+
+.section_subtitle_style {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* --- Header and Buttons --- */
+.main_header_area {
+  background-color: #007bff;
+  background: url('./photo/image.png') no-repeat center/cover 
+    fixed; /* Parallax effect */
+  
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  animation: fadeIn 1s ease-out; /* Subtle entry animation */
+  /* filter: brightness(70%); */
+}
+
+.main_header_area h1 {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+  /* color: #007bff; Bright Blue for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* filter: brightness(80%); */
+  color: var(--blue-700);
+}
+
+.primary_action_btn,
+.secondary_action_btn {
+  display: inline-block;
+  padding: 14px 35px;
+  text-decoration: none;
+  border-radius: 50px; /* Modern pill-shape */
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.primary_action_btn {
+  background-color: white;
+  color: #007bff;
+  border: 2px solid white;
+  margin-top: 30px;
+}
+
+.primary_action_btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.secondary_action_btn {
+  background-color: #4caf50; /* Green highlight */
+  color: white;
+  border: 2px solid #4caf50;
+  margin-top: 20px;
+}
+
+.secondary_action_btn:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Our Story Section --- */
+.story_intro_text {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story_pillars_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pillar_card_item {
+  flex: 1 1 200px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.pillar_card_item:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon_container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e9f5ff;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+  border: 2px solid #cce5ff;
+  transition: transform 0.3s ease;
+}
+
+.pillar_card_item:hover .icon_container {
+  transform: rotateY(180deg); /* Flip icon on hover */
+}
+
+.pillar_card_item h3 {
+  margin-bottom: 10px;
+  color: #004a80;
+  font-size: 1.3em;
+}
+
+/* --- Our Products Section --- */
+.product_cards_layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product_card_item {
+  flex: 1 1 280px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.product_card_item:hover {
+  border-color: #007bff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted_card {
+  /* border: 3px solid #4CAF50; */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product_icon {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pc_product_icon {
+  background-color: #009688;
+}
+.pp_product_icon {
+  background-color: #4caf50;
+}
+.pet_product_icon {
+  background-color: #2196f3;
+}
+
+/* --- Leadership Team Section --- */
+.team_members_container {
+  display: flex;
+  /* FIX: Allow wrapping to prevent horizontal slider/overflow */
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+  overflow-x: hidden; /* Ensures no scrollbar appears on the container */
+  padding-bottom: 10px;
+  overflow: visible;
+}
+
+.team_member_card {
+  /* Ensures 4 cards fit on one line on large screens (25% minus gap) */
+  flex: 0 0 calc(25% - 22.5px);
+  max-width: 280px;
+  text-align: center;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.team_member_card:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.member_photo_wrapper {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.team_member_card:hover .member_photo_wrapper {
+  box-shadow: 0 0 0 5px #007bff; /* Highlight ring on hover */
+}
+
+.member_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team_member_card h4 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.team_member_card .member_title {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* --- Ready to Partner Section and Footer --- */
+.partner_cta_section {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.partner_cta_section .section_title_style {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#main_site_footer {
+  background-color: #004a80;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9em;
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Tablet/Mid-Screen (up to 992px) */
+@media (max-width: 992px) {
+  .section_title_style {
+    font-size: 2.5em;
+  }
+
+  /* Story Card layout switch (linear on tablet) */
+  .story_pillars_grid {
+    gap: 20px;
+  }
+
+  .pillar_card_item {
+    flex: 1 1 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+
+  .pillar_card_item:hover {
+    transform: none; /* Disable transform on touch devices */
+  }
+
+  .icon_container {
+    margin: 0 15px 0 0;
+    flex-shrink: 0;
+  }
+
+  /* Product cards switch to 2-in-a-row */
+  .product_card_item {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .product_card_item:hover {
+    transform: none;
+  }
+
+  /* Team members switch to 2-in-a-row */
+  .team_members_container {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .team_member_card {
+    /* Forces a 2x2 layout by taking ~50% width */
+    flex: 0 1 calc(50% - 15px);
+    max-width: unset;
+  }
+
+  .team_member_card:hover {
+    transform: none;
+  }
+
+  .team_member_card:hover .member_photo_wrapper {
+    box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.1);
+  }
+}
+
+/* Mobile (up to 480px) - Matches the screenshot layout */
+@media (max-width: 480px) {
+  .main_header_area h1 {
+    font-size: 2.5em;
+  }
+
+  .content_section_padding {
+    padding: 40px 0;
+  }
+
+  .section_title_style {
+    font-size: 1.8em;
+  }
+
+  /* Team and Product cards take full width (1-in-a-row) on phone */
+  .product_card_item,
+  .team_member_card {
+    flex: 1 1 100%;
+  }
+
+  /* Story cards revert to a fully centered, vertical mobile style */
+  .pillar_card_item {
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    padding: 20px 0;
+  }
+
+  .icon_container {
+    margin: 0 auto 10px;
+  }
+}
+/* --- Scrolling Text Banner (Marquee) --- */
+.scrolling_banner_section {
+  background-color: #004a80; /* Deep Blue Background */
+  color: #f0f0f0; /* Light text */
+  padding: 10px 0;
+  overflow: hidden;
+  border-bottom: 3px solid #007bff;
+}
+
+.scrolling_text_container {
+  /* This is the track for the moving text */
+  display: flex;
+  width: 200%; /* Double the width to ensure seamless loop */
+  animation: scroll-left 30s linear infinite; /* Animation applied here */
+}
+
+.scrolling_text_chunk {
+  white-space: nowrap;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-right: 50px; /* Spacing between the repeated blocks */
+  min-width: 100%; /* Each chunk must take up 100% of the container width */
+}
+
+.scrolling_text_chunk span {
+  /* Separator dot */
+  color: #4caf50; /* Green highlight */
+  margin: 0 15px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Move exactly half of the 200% width */
+} /* Tablet/Mid-Screen (up to 992px) */
+@media (max-width: 992px) {
+  .section_title_style {
+    font-size: 2.5em;
+  }
+
+  .pillar_card_item {
+    flex: 1 1 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+
+  .pillar_card_item:hover {
+    transform: none;
+  }
+
+  .icon_container {
+    margin: 0 15px 0 0;
+    flex-shrink: 0;
+  }
+
+  .product_card_item {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .product_card_item:hover {
+    transform: none;
+  }
+
+  .team_members_container {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .team_member_card {
+    flex: 0 1 calc(50% - 15px);
+    max-width: unset;
+  }
+
+  .team_member_card:hover {
+    transform: none;
+  }
+
+  .team_member_card:hover .member_photo_wrapper {
+    box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.1);
+  }
+
+  /* Responsive adjustments for Nav */
+  .nav_bar_container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav_links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav_links a {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+
+  /* Hide scrolling text animation on smaller devices if needed, but keeping it small */
+  .scrolling_text_chunk {
+    font-size: 0.9em;
+  }
+}

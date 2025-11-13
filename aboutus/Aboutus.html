@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./gallery.css" />
+    <!-- <link rel="stylesheet" href="../home_page/style.css" /> -->
+    <link rel="stylesheet" href="../fabrication/fabrication.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../aboutus/style.css">
+    <link rel="stylesheet" href="../gallery/gallery.css">
+<style>
+  .logo
+  {
+    width: 120px;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  
+     <!-- -----------------------------navbar--------------------------- -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="logo"><img src="../home_page/logo/petbot_logo.png" alt="" /></div>
+        <div class="menu-toggle" id="menu-toggle1">☰</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">GALLERY ▾</a>
+            <div class="dropdown-content">
+                 <a href="../gallery/gallery_pc.html">BOTTLES</a>
+              <a href="../gallery/gallery_pp.html">CONTAINERS</a>
+             
+              <a href="../gallery/gallery_pet.html">JARS</a>
+
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">FABRICATION ▾</a>
+            <div class="dropdown-content">
+              <a href="../fabrication/pet.html">POLYETHYLENE TEREPHTHALATE</a>
+              <a href="../fabrication/pc.html">POLYCARBONATE</a>
+              <a href="../fabrication/pp.html">Polypropylene</a>
+            </div>
+          </li>
+          
+          <li><a href="../aboutus/Aboutus.html">ABOUT US</a></li>
+          <!-- <li><a href="#">BLOG</a></li> -->
+            <li class="dropdown">
+            <a href="#">REACH OUT▾</a>
+            <div class="dropdown-content">
+              <a href="../contactus/contactus.html">Contact Us</a>
+              <a href="../contactus/Queries.html">Queries</a>
+              <a href="../contactus/feedback.html">Feedback</a>
+            </div>
+          </li>
+         <div class="search-container-uni123">
+            <button id="searchBtn-uni123" class="search-icon-uni123">
+              <i class="fa-solid fa-magnifying-glass gradient-icon-uni123"></i>
+            </button>
+            <input
+              type="text"
+              id="searchInput-uni123"
+              placeholder="Search..."
+            />
+          </div>
+        </ul>
+        <div class="nav-actions">
+          <div class="button-wrapper-567">
+    <div class="glow-aura-567"></div>
+    <a href="../login/Singup.html" class="btn-567">
+  <span class="btn-text">Sign in</span>
+  <!-- ✨ change icon class below for different styles -->
+  <i class="fa-solid fa-right-to-bracket btn-icon"></i>
+</a>
+
+
+    <svg class="svg-567" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad-567" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: var(--local-g1);" />
+          <stop offset="50%" style="stop-color: var(--local-g2);" />
+          <stop offset="100%" style="stop-color: var(--local-g3);" />
+        </linearGradient>
+      </defs>
+
+      <path class="path-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <path class="trail-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <circle class="dot-567" r="14" />
+    </svg>
+    <!-- <button>butto</button> -->
+  </div>
+ <div class="btn-order">
+<!-- https://feathericons.dev/?search=user&iconset=feather -->
+<a href="../login/Singup.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</svg></a>
+
+ </div>
+        <!-- <button class="btn-order">ORDER NOW</button> -->
+  
+        </div>
+      </div>
+    </nav>
+  
+    <header id="hero_section" class="main_header_area">
+      <div class="main_container">
+        <div class="hero_content_wrapper">
+          <h1>Revolutionizing Sustainable Packaging</h1>
+          <p>Delivering excellence in  <span>PC</span>,<span>PP</span>&<span>PET</span> bottle manufacturing.</p>
+          <a href="../contactus/contactus.html" class="primary_action_btn">Contact Us</a>
+        </div>
+      </div>
+    </header>
+<!-- New: Scrolling Text Banner -->
+    <section id="scrolling_banner_section" class="scrolling_banner_section">
+      <div class="scrolling_text_container">
+        <!-- Duplicate the text block twice for seamless looping -->
+        <div class="scrolling_text_chunk">
+          MAXIMUM PURITY <span>•</span> SUSTAINABLE BOTTLES
+          <span>•</span> HEALTHY WATER <span>•</span> CONVENIENT DELIVERY
+          <span>•</span> 5-STEPS FILTRATION <span>•</span> PURE WATER
+        </div>
+        <div class="scrolling_text_chunk">
+          MAXIMUM PURITY <span>•</span> SUSTAINABLE BOTTLES
+          <span>•</span> HEALTHY WATER <span>•</span> CONVENIENT DELIVERY
+          <span>•</span> 5-STEPS FILTRATION <span>•</span> PURE WATER
+        </div>
+      </div>
+    </section>
+    <section id="our_story_section" class="content_section_padding">
+      <div class="main_container">
+        <h2 id="story_section_header" class="section_title_style">Our Story</h2>
+        <p class="story_intro_text">
+          Founded with a vision to revolutionize the packaging industry, we've
+          grown into a trusted partner for businesses worldwide. Our
+          state-of-the-art facilities and dedicated team ensure every bottle we
+          produce meets the highest standards of quality, durability, and
+          environmental responsibility.
+        </p>
+
+        <div class="story_pillars_grid">
+          <div class="pillar_card_item">
+            <div class="icon_container"><i class="fas fa-certificate"></i></div>
+            <h3>Quality Excellence</h3>
+            <p>
+              ISO-certified manufacturing ensuring every bottle meets the
+              highest industry standards
+            </p>
+          </div>
+          <div class="pillar_card_item">
+            <div class="icon_container"><i class="fas fa-leaf"></i></div>
+            <h3>Sustainability</h3>
+            <p>
+              Committed to eco-friendly practices and recyclable materials for a
+              greener future
+            </p>
+          </div>
+          <div class="pillar_card_item">
+            <div class="icon_container"><i class="fas fa-lightbulb"></i></div>
+            <h3>Innovation</h3>
+            <p>
+              Cutting-edge technology and continuous improvement in bottle
+              design and production
+            </p>
+          </div>
+          <div class="pillar_card_item">
+            <div class="icon_container"><i class="fas fa-handshake"></i></div>
+            <h3>Customer Focus</h3>
+            <p>
+              Dedicated partnership approach delivering tailored solutions for
+              your unique needs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section
+      id="products_showcase_section"
+      class="content_section_padding light_background_section"
+    >
+      <div class="main_container">
+        <h2 class="section_title_style">Our Products</h2>
+        <p class="section_subtitle_style">
+          Premium bottle solutions engineered for performance, durability, and
+          sustainability
+        </p>
+
+        <div class="product_cards_layout">
+          <div class="product_card_item">
+            <div class="product_icon pc_product_icon">PC</div>
+            <h3>PC Bottles</h3>
+            <p>
+              Polycarbonate bottles offering superior strength, clarity, and
+              temperature resistance for premium applications
+            </p>
+          </div>
+          <div class="product_card_item highlighted_card">
+            <div class="product_icon pp_product_icon">PP</div>
+            <h3>PP Bottles</h3>
+            <p>
+              Polypropylene bottles providing excellent chemical resistance and
+              flexibility for diverse industrial uses
+            </p>
+          </div>
+          <div class="product_card_item">
+            <div class="product_icon pet_product_icon">PET</div>
+            <h3>PET Bottles</h3>
+            <p>
+              Polyethylene Terephthalate bottles delivering lightweight,
+              recyclable solutions for beverages and consumer products
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="leadership_team_section" class="content_section_padding">
+      <div class="main_container">
+        <h2 class="section_title_style">Leadership Team</h2>
+        <p class="section_subtitle_style">
+          Meet the visionary leaders driving our mission forward with expertise,
+          passion, and unwavering commitment to excellence
+        </p>
+
+        <div class="team_members_container">
+          <div class="team_member_card">
+            <div class="member_photo_wrapper">
+              <!-- Placeholder images must be available in the project folder -->
+              <img
+                src="./image.png"
+                alt="Photo of Hummaid"
+                class="member_image"
+              />
+            </div>
+            <h4>Hummaid</h4>
+            <p class="member_title">Chief Executive Officer</p>
+            <p class="member_description">
+              Visionary leader driving innovation in sustainable packaging
+              solutions
+            </p>
+          </div>
+          <div class="team_member_card">
+            <div class="member_photo_wrapper">
+              <img
+                src="./Photo business concept portrait of excited man dressed in formal wear giving thumbs up _ Premium AI-generated image.jpeg"
+                alt="Photo of Anas"
+                class="member_image"
+              />
+            </div>
+            <h4>Anas</h4>
+            <p class="member_title">Chief Financial Officer</p>
+            <p class="member_description">
+              Strategic financial architect ensuring sustainable growth and
+              profitability
+            </p>
+          </div>
+          <div class="team_member_card">
+            <div class="member_photo_wrapper">
+              <img
+                src="./A man in a grey suit is holding a laptop _ Premium AI-generated image.jpeg"
+                alt="Photo of Shoaib"
+                class="member_image"
+              />
+            </div>
+            <h4>Shoaib</h4>
+            <p class="member_title">Chief Technology Officer</p>
+            <p class="member_description">
+              Technology innovator revolutionizing bottle manufacturing
+              processes
+            </p>
+          </div>
+          <div class="team_member_card">
+            <div class="member_photo_wrapper">
+              <img
+                src="./download (4).jpeg"
+                alt="Photo of Jazib"
+                class="member_image"
+              />
+            </div>
+            <h4>Jazib</h4>
+            <p class="member_title">C-Suite Executive</p>
+            <p class="member_description">
+              Strategic partner ensuring operational excellence and market
+              expansion
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contact_us_form" class="partner_cta_section">
+      <div class="main_container">
+        <h2 class="section_title_style">Ready to Partner With Us?</h2>
+        <p>
+          Discover how our premium bottle solutions can elevate your business.
+          Let's create something exceptional together.
+        </p>
+        <!-- <a href="#" class="secondary_action_btn">Descripption </a> -->
+      </div>
+    </section>
+  <!-- -----------------------------Footer--------------------------- -->
+    <footer>
+      <div class="newsletter">
+        <h3>Subscribe for New arrivals and discounts</h3>
+        <input type="email" placeholder="Your email address" />
+        <button>➤</button>
+      </div>
+
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-logo"><img src="../home_page/logo/petbot_logo.png" alt=""></div>
+          <p>
+           <i class="fa-solid fa-phone"></i> (0) 123456789<br/><i class="fa-solid fa-location-dot"></i>North Karachi <br/><i class="fa-solid fa-envelope"></i>name@yourmail.com
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-linkedin linkdin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>MAIN</h4>
+          <ul>
+            <li><a href="../index.html">Home_page</a></li>
+            <li><a href="../aboutus/Aboutus.html">About_us</a></li>
+            <li><a href="../aside/aside.html">side_map</a></li>
+            <!-- <li><a href="#">Water Testing</a></li>
+            <li><a href="#">System Repair</a></li>
+            <li><a href="#">Water Testing</a></li> -->
+          </ul>
+            <h4>Get started</h4>
+          <ul>
+            <li><a href="../login/Singup.html">Sign_up</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <!-- <li><a href="./gallery/gallery_pp.html">Conatiners</a></li> -->
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../gallery/gallery_pc.html">Bottles</a></li>
+            <li><a href="../gallery/gallery_pet.html">Jars</a></li>
+            <li><a href="../gallery/gallery_pp.html">Conatiners</a></li>
+           
+          </ul>
+<h4>Contact</h4>
+          <ul>
+            <li><a href="../contactus/contactus.html">Contact_us</a></li>
+            <li><a href="../contactus/Queries.html">Queries</a></li>
+            <li><a href="../contactus/feedback.html">Feedback</a></li>
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>manufacturing process</h4>
+          <ul>
+            <li><a href="../fabrication/pc.html">PC (Polyethylene terephthalate)</a></li>
+            <li><a href="../fabrication/pp.html">PP (Polypropylene)</a></li>
+            <li><a href="../fabrication/pet.html">PET (Polyethylene terephthalate)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+  
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+      <script src="../fabrication/fabrication.js"></script>
+    <script src="../home_page/script.js"></script>
+    <script src="../gallery/gallery.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super-Aesthetic PET Packaging Gallery</title>
+    <!-- <link rel="stylesheet" href="../home_page/style.css"> -->
+    <link rel="stylesheet" href="../fabrication/fabrication.css">
+    <link rel="stylesheet" href="../gallery/gallery.css">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        #packHeroParticles{
+             background: url('./gallery_photo/meow2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 101%;
+            height: 100%;
+            z-index: -1;
+            /* overflow: ; */
+        }
+    </style>
+</head>
+<body>
+<!-- -----------------------------navbar--------------------------- -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="logo"><img src="../home_page/logo/petbot_logo.png" alt="" /></div>
+        <div class="menu-toggle" id="menu-toggle1">☰</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">GALLERY ▾</a>
+            <div class="dropdown-content">
+                 <a href="../gallery/gallery_pc.html">BOTTLES</a>
+              <a href="../gallery/gallery_pp.html">CONTAINERS</a>
+             
+              <a href="../gallery/gallery_pet.html">JARS</a>
+
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">FABRICATION ▾</a>
+            <div class="dropdown-content">
+              <a href="../fabrication/pet.html">POLYETHYLENE TEREPHTHALATE</a>
+              <a href="../fabrication/pc.html">POLYCARBONATE</a>
+              <a href="../fabrication/pp.html">Polypropylene</a>
+            </div>
+          </li>
+          
+          <li><a href="../aboutus/Aboutus.html">ABOUT US</a></li>
+          <!-- <li><a href="#">BLOG</a></li> -->
+            <li class="dropdown">
+            <a href="#">REACH OUT▾</a>
+            <div class="dropdown-content">
+              <a href="../contactus/contactus.html">Contact Us</a>
+              <a href="../contactus/Queries.html">Queries</a>
+              <a href="../contactus/feedback.html">Feedback</a>
+            </div>
+          </li>
+         <div class="search-container-uni123">
+            <button id="searchBtn-uni123" class="search-icon-uni123">
+              <i class="fa-solid fa-magnifying-glass gradient-icon-uni123"></i>
+            </button>
+            <input
+              type="text"
+              id="searchInput-uni123"
+              placeholder="Search..."
+            />
+          </div>
+        </ul>
+        <div class="nav-actions">
+          <div class="button-wrapper-567">
+    <div class="glow-aura-567"></div>
+    <a href="../login/Singup.html" class="btn-567">
+  <span class="btn-text">Sign in</span>
+  <!-- ✨ change icon class below for different styles -->
+  <i class="fa-solid fa-right-to-bracket btn-icon"></i>
+</a>
+
+
+    <svg class="svg-567" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad-567" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: var(--local-g1);" />
+          <stop offset="50%" style="stop-color: var(--local-g2);" />
+          <stop offset="100%" style="stop-color: var(--local-g3);" />
+        </linearGradient>
+      </defs>
+
+      <path class="path-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <path class="trail-567" d="M 25 0 H 375 Q 400 0 400 25 V 75 Q 400 100 375 100 H 25 Q 0 100 0 75 V 25 Q 0 0 25 0 Z"/>
+      <circle class="dot-567" r="14" />
+    </svg>
+    <!-- <button>butto</button> -->
+  </div>
+ <div class="btn-order">
+<!-- https://feathericons.dev/?search=user&iconset=feather -->
+<a href="../login/login.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+  <circle cx="12" cy="7" r="4" />
+</svg></a>
+
+ </div>
+        <!-- <button class="btn-order">ORDER NOW</button> -->
+  
+        </div>
+      </div>
+    </nav>
+    <!-- -----------------------------hero section--------------------------- -->
+    <header class="pack-hero-primary">
+        <div class="pack-hero-particle-system" id="packHeroParticles"></div>
+         <!-- <video src="../fabrication/fabrication_video/pc_bottle_video.mp4" autoplay muted loop class="pack-hero-video-background" > -->
+    
+         <!-- </video> -->
+        <nav class="pack-top-navigation">
+            <div class="pack-nav-list">
+                <a href="#" class="pack-nav-link-item pack-active-link">Home</a>
+                <a href="#" class="pack-nav-link-item">About Us</a>
+                <a href="#" class="pack-nav-link-item">Products</a>
+                <a href="#" class="pack-nav-link-item">Contact Us</a>
+            </div>
+            <div class="pack-nav-search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+        </nav>
+        <div class="pack-hero-content-area">
+<h1>Smart Packaging for Modern Brands</h1>
+<p>Delivering quality bottles and containers crafted to enhance performance, protection, and presentation across all sectors.</p>
+
+            <div class="pack-hero-button-group">
+                <!-- <a href="#" class="pack-explore-button">Explore Products &rarr;</a> -->
+                <a href="../contactus/contactus.html" class="pack-contact-button">Contact Us</a>
+            </div>
+        </div>
+        <div class="pack-header-feature-grid"> <div class="pack-feature-card"> <i class="fa-brands fa-pagelines"></i>
+                <h3>Eco Smart. Eco Strong.</h3>
+                <p> Environmentally responsible packaging solutions</p>
+            </div>
+            <div class="pack-feature-card"> <i class="fa-solid fa-boxes-packing"></i>>
+                <h3>Packaging with Purpose</h3>
+                <p>Customized packaging solutions for various industries</p>
+            </div>
+            <div class="pack-feature-card"> <i class="fa-solid fa-user-group"></i>
+                <h3>Planet-Friendly Packaging Solutions</h3>
+                <p>Eco-friendly packaging solutions for a greener future</p>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="pack-gallery-wrapper">
+        <h2 class="pack-gallery-main-title">Our Product Gallery</h2>
+        <p class="pack-gallery-sub-heading">Explore our comprehensive range of packaging solutions designed for various industries</p>
+
+        <div class="pack-product-filter-bar">
+            <button class="pack-filter-action-button pack-active-filter" data-filter="all">All Products</button>
+            <button class="pack-filter-action-button" data-filter="bottles">Food storage containers</button>
+            <button class="pack-filter-action-button" data-filter="jars">Protein containers</button>
+            <button class="pack-filter-action-button" data-filter="containers">Kitchen containers</button>
+            <!-- <button class="pack-filter-action-button" data-filter="dispensers">Powder jars</button> -->
+            <button class="pack-filter-action-button" data-filter="caps">Lotion pump bottles</button>
+            <button class="pack-filter-action-button" data-filter="custom">Sanitizer dispensers</button>
+            <button class="pack-filter-action-button" data-filter="accessories">Reusable cups</button>
+            <button class="pack-filter-action-button" data-filter="dispensors">Travel mugs</button>
+
+
+             
+        </div>
+
+        <div class="pack-product-listing-grid">
+<!-- --------------------------------bottles------------------------------------ -->
+            <div class="pack-unit-card bottles all" 
+                data-title="Durable, impact-resistant, and shatterproof" 
+                data-desc="Use: Ideal for packaging and storing dry fruits, snacks, grains, pulses, spices, pickles, and other food items." 
+                data-category="Container"
+                data-capacity="250g - 2kg"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Screw Cap / Snap Lid / Flip-Top Options"
+                data-color="Clear/transparent"
+                data-price="3.49$"
+                data-pdf-link="/specs/water-bottle-500ml.pdf"> 
+          <span class="petbot-span">PET</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/5.png" alt="Water Bottle">
+                </div>
+                <div class="pack-card-info-panel">
+          <a href="./product detail/PET food-grade BPA-free and lightweight.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">FOOD STORSGE CONTAINERS</span>
+                    <h3 class="pack-product-main-name">PET food-grade, BPA-free, and lightweight</h3>
+                    <span class="price">3.49$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card bottles all" 
+                data-title=" PurePack PP Food Storage Container." 
+                data-desc="Use: Ideal for packaging and storing dry fruits, snacks, pulses, spices, sugar, flour, and other food items." 
+                data-category="Contaner"
+                data-capacity="25g - 1.5kg"
+                data-material="PP (Polypropylene)"
+                data-finish="Screw Cap / Snap Lid / Flip-Top Options"
+                data-color="Translucent colors"
+                data-price="5.99$"
+                data-pdf-link="/specs/oil-dispenser-750ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PP/5.png" alt="Oil Bottle">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/PP Food container  Food-Grade  Eco-Safe.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">FOOD STORSGE CONTAINERS</span>
+                    <h3 class="pack-product-main-name"> PP Food container – Food-Grade & Eco-Safe</h3>
+                    <span class="price">5.99$</span>
+                </div>
+            </div>
+            
+            <div class="pack-unit-card bottles all" 
+                data-title="Clear, Secure & Practical." 
+                data-desc="Use: Ideal for packaging and storing dry fruits, snacks, pulses, spices, pickles, sugar, and other dry or semi-solid food items" 
+                data-category="containers"
+                data-capacity="500g - 5kg"
+                data-material="PC (Polycarbonate)"
+                data-finish="Screw Cap / Snap Lid / Flip-Top Options."
+                data-color="loght brown / black / transparent"
+                data-price="4.75$"
+                data-pdf-link="/specs/cream-jar-50g.pdf"> 
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/5.png" alt="Cosmetic Jar">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/PC Container  Transparent Reusable  Stackable.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                  <span class="pack-category-tag">FOOD STORSGE CONTAINERS</span>
+                    <h3 class="pack-product-main-name">PC Container – Transparent, Reusable & Stackable</h3>
+                    <span class="price">4.75$</span>
+                </div>
+            </div>
+<!-- -----------------------------------Oil bottles ------------------------------------ --> 
+            <div class="pack-unit-card jars all" 
+                data-title="Shatterproof & Hygienic" 
+                data-desc="Use: Ideal for packaging protein powders, nutritional supplements, health drinks, and fitness products." 
+                data-category="Container"
+                data-capacity="100g - 2.5kg"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Screw Cap / Flip-Top Lid / Induction Seal Cap Options"
+                data-color="Blue/Amber/ custom colors"
+                data-price="8.25$"
+                data-pdf-link="/specs/storage-container-5l.pdf"> 
+          <span class="petbot-span">PET</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/6.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/PET Protein Container  Custom Colors  Secure Seal.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">PROTEIN CONTAINER</span>
+                    <h3 class="pack-product-main-name">PET Protein Container – Custom Colors & Secure Seal</h3>
+                    <span class="price">8.25$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card jars all" 
+                data-title="Durable & Lightweight" 
+                data-desc="High-Quality PP Plastic Bottle for Liquids & honey." 
+                data-category="container"
+                data-capacity="500g - 1kg"
+                data-material="PP (Polypropylene)"
+                data-finish="Screw Cap / Snap Lid"
+                data-color="black white tranluscent colors"
+                data-price="7.49$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PP/6.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Premium PP Protein Containers  Safe  Durable Storage for Supplements.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">PROTEIN CONTAINER</span>
+                    <h3 class="pack-product-main-name">Premium PP Protein Containers – Safe & Durable Storage for Supplements</h3>
+                    <span class="price">7.49$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card jars all" 
+                data-title="Rigid, durable, shatter-resistant, and reusable" 
+                data-desc="Use: Ideal for protein powders, dietary supplements, health drinks, and nutrition blends." 
+                data-category="Container"
+                data-capacity="300g - 10kg"
+                data-material="PC (Polycarbonate)"
+                data-finish="Screw Cap / Snap Lid"
+                data-color="Transparent , cristral-clear white colors"
+                data-price="11.95$"
+                data-pdf-link="/specs/flip-top-cap.pdf">
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/6.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Premium PC Protein Containers  Strong Clear  Hygienic Storage.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">PROTEIN CONTAINER</span>
+                    <h3 class="pack-product-main-name">Premium PC Protein Containers – Strong, Clear & Hygienic Storage</h3>
+                    <span class="price">11.95$</span>
+                </div>
+            </div>
+            <!-- ------------------------------------Shampoo bottles------------------------------------ -->
+
+            <div class="pack-unit-card containers all" 
+            
+                data-title="BPA-free and safe for storing dry food items." 
+                data-desc="Use: Ideal for storing grains, pulses, sugar, flour, snacks, and other kitchen essentials." 
+                data-category="Container"
+                data-capacity="500g - 1.2kg "
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Airtight Screw Cap / Flip Lid"
+                data-color="Transparent, Frosted, or Custom colors"
+                data-price="6.30$"
+                data-pdf-link="/specs/storage-container-5l.pdf">
+                
+          <span class="petbot-span">PET</span>
+           <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/7.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/BPA-Free PET Kitchen Containers with Airtight Lid.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">KITCHEN CONTAINERS</span>
+                    <h3 class="pack-product-main-name">BPA-Free PET Kitchen Containers with Airtight Lid</h3>
+                    <span class="price">6.30$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card containers all" 
+                data-title="Multi-Purpose PP Kitchen Storage Solutions" 
+                data-desc="Use: Ideal for storing grains, pulses, snacks, spices, dry fruits, and other kitchen essentials." 
+                data-category="Container"
+                data-capacity="225g - 1kg"
+                data-material="PP (Polypropylene)"
+                data-finish="Snap Lid / Screw Cap / Airtight Seal"
+                data-color="White, Transparent, Black, and Custom colors available"
+                data-price="14.50$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PP/7.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/PP Kitchen Storage Jars with Secure Lock Lid.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">KITCHEN CONTAINERS</span>
+                    <h3 class="pack-product-main-name">PP Kitchen Storage Jars with Secure Lock Lid</h3>
+                    <span class="price">14.50$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card containers all" 
+                data-title="BPA-free and safe for storing food products." 
+                data-desc="Use: Ideal for storing grains, pulses, snacks, spices, dry fruits, and kitchen essentials." 
+                data-category="Container"
+                data-capacity="1.5kg - 5kg"
+                data-material="PC (Polycarbonate)"
+                data-finish="Airtight Snap Lid / Screw Cap for secure sealing"
+                data-color="Transparent, Clear, White, Black, and Custom colors"
+                data-price="13.20$"
+                data-pdf-link="/specs/flip-top-cap.pdf"> 
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/7.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Airtight PC Kitchen Jars for Modern Homes.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>    
+                    <span class="pack-category-tag">KITCHEN CONTAINERS</span>
+                    <h3 class="pack-product-main-name">Airtight PC Kitchen Jars for Modern Homes</h3>
+                    <span class="price">13.20$</span>
+                </div>
+            </div>
+            
+                        <!-- ------------------------------------chemical bottles------------------------------------ -->
+
+            <div class="pack-unit-card caps all" 
+                data-title="Durable PET Lotion Dispenser Bottles." 
+                data-desc="Use: Ideal for lotions, creams, hand sanitizers, shampoos, conditioners, and liquid soaps." 
+                data-category="Bottles"
+                data-capacity="100ml - 500ml"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="Clear/transparent colors and custom colors"
+                data-price="9.99$"
+                data-pdf-link="/specs/storage-container-5l.pdf">
+          <span class="petbot-span">PET</span>
+           <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/8.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Elegant PET Pump Bottles for Personal Care Products.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">LOTION PUMPS</span>
+                    <h3 class="pack-product-main-name">Elegant PET Pump Bottles for Personal Care Products</h3>
+                    <span class="price">9.99$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card caps all" 
+                data-title="Eco-Safe & Easy to Refill" 
+                data-desc="Use: Ideal for lotions, creams, hand sanitizers, shampoos, conditioners, body wash, and skincare products" 
+                data-category="Bottle"
+                data-capacity="250ml - 800ml"
+                data-material="PP (Polypropylene)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="White, Transparent, Black, Natural, and Custom colors"
+                data-price="10.00$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="../gallery/gallery_photo/PP/8.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Premium PP Lotion Pump Bottles.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">LOTION PUMPS</span>
+                    <h3 class="pack-product-main-name">Premium PP Lotion Pump Bottles</h3>
+                    <span class="price">10.00$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card caps all" 
+                data-title="food-grade, BPA-free, and crystal clear" 
+                data-desc="Use: Ideal for lotions, creams, hand sanitizers, serums, shampoos, conditioners, and other skincare or haircare liquids" 
+                data-category="Bottle"
+                data-capacity="500ml - 2000ml"
+                data-material="PC (Polycarbonate)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="Transparent"
+                data-price="16.75$"
+                data-pdf-link="/specs/flip-top-cap.pdf"> 
+          <span class="petbot-span">PC</span>
+                
+                <div class="pack-card-image-box">
+
+                    <img src="./gallery_photo/PC/8.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/High-Strength PC Lotion Dispenser Bottles.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">LOTION PUMPS</span>
+                    <h3 class="pack-product-main-name">High-Strength PC Lotion Dispenser Bottles</h3>
+                    <span class="price">16.75$</span>
+                </div>
+            </div>
+                             <!-- ------------------------------------chemical bottles------------------------------------ -->
+
+            <div class="pack-unit-card custom all" 
+                data-title="Durable PET Lotion Dispenser Bottles." 
+                data-desc="Use: Ideal for hand sanitizer, disinfectant liquids, sprays, and other hygiene solutions." 
+                data-category="dispensers"
+                data-capacity="200ml - 500ml"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="Clear/transparent colors and custom colors"
+                data-price="5.50$"
+                data-pdf-link="/specs/storage-container-5l.pdf">
+          <span class="petbot-span">PET</span>
+           <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/9.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Lightweight PET Dispensers for Hygiene Solutions.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">SANITIZER DISPENSERS</span>
+                    <h3 class="pack-product-main-name">Lightweight PET Dispensers for Hygiene Solutions</h3>
+                    <span class="price">5.50$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card custom all" 
+                data-title="Reusable PP Sanitizer Containersl" 
+                data-desc="Use: Ideal for hand sanitizer, disinfectants, gels, and hygiene solutions" 
+                data-category="dispensers"
+                data-capacity="250ml - 800ml"
+                data-material="PP (Polypropylene)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="White, Transparent, Black, Natural, and Custom colors"
+                data-price="18.40$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="../gallery/gallery_photo/PP/9.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/BPA-Free PP Sanitizer Bottles with Secure Pump.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">SANITIZER DISPENSERS</span>
+                    <h3 class="pack-product-main-name">BPA-Free PP Sanitizer Bottles with Secure Pump</h3>
+                    <span class="price">18.40$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card custom all" 
+                data-title="Crystal Clear PC Sanitizer Dispenser Bottles" 
+                data-desc="Use: Ideal for hand sanitizer, disinfectants, hygiene solutions, and liquid products" 
+                data-category="dispensers"
+                data-capacity="500ml - 2000ml"
+                data-material="PC (Polycarbonate)"
+                data-finish="Lotion Pump / Dispenser Pump"
+                data-color="Transparent"
+                data-price="22.00$"
+                data-pdf-link="/specs/flip-top-cap.pdf"> 
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/9.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Premium PC Pump Bottles for Sanitizer  Disinfectants.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">SANITIZER DISPENSERS</span>
+                    <h3 class="pack-product-main-name">Premium PC Pump Bottles for Sanitizer & Disinfectants</h3>
+                    <span class="price">22.00$</span>
+                </div>
+            </div>
+                <!-- ------------------------------------chemical bottles------------------------------------ -->
+
+            <div class="pack-unit-card accessories all" 
+                data-title="Premium PET Reusable Cups." 
+                data-desc="Use: Ideal for juices, water, shakes, smoothies, cold coffee, and soft drinks." 
+                data-category="Tumblers"
+                data-capacity="200ml - 350ml"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Smooth / Glossy surface"
+                data-color="custom colors"
+                data-price="6.49$"
+                data-pdf-link="/specs/storage-container-5l.pdf">
+                
+          <span class="petbot-span">PET</span>
+           <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/10.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Transparent PET Reusable Drinking Cups.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                  <span class="pack-category-tag">SRESUABLE CUPS</span>
+                    <h3 class="pack-product-main-name">Transparent PET Reusable Drinking Cups</h3>
+                    <span class="price">6.49$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card accessories all" 
+                data-title="Eco-Friendly PP Drinking Cups" 
+                data-desc="Use: Suitable for coffee, tea, water, juices, smoothies, and soft drinks" 
+                data-category="Tumblers"
+                data-capacity="250ml - 750ml"
+                data-material="PP (Polypropylene)"
+                data-finish="Matte or Glossy"
+                data-color="White, Transparent, Black, Natural, and Custom colors"
+                data-price="8.20$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <div class="pack-card-image-box">
+                    <img src="../gallery/gallery_photo/PP/10.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+          <a href="./product detail/BPA-Free PP Beverage Cups.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">SRESUABLE CUPS</span>
+                    <h3 class="pack-product-main-name">BPA-Free PP Beverage Cups</h3>
+                    <span class="price">8.20$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card accessories all" 
+                data-title="High-Strength PC Reusable Beverage Cups" 
+                data-desc="Use: Ideal for coffee, tea, juices, shakes, smoothies, and water" 
+                data-category="Tumblers"
+                data-capacity="500ml - 1L"
+                data-material="PC (Polycarbonate)"
+                data-finish="Glossy / Premium Clear Finish"
+                data-color="Transparent, Clear, White, Black, and Custom options"
+                data-price="15.75$"
+                data-pdf-link="/specs/flip-top-cap.pdf"> 
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/10.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+            <a href="./product detail/Elegant  Durable PC Cups.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">SRESUABLE CUPS</span>
+                    <h3 class="pack-product-main-name">Elegant & Durable PC Cups</h3>
+                    <span class="price">15.75$</span>
+                </div>
+            </div>
+                    <!-- ------------------------------------chemical bottles------------------------------------ -->
+
+            <div class="pack-unit-card dispensors all" 
+                data-title="Lightweight PET Travel Cup with Lid." 
+                data-desc="Use: Ideal for water, juices, smoothies, iced coffee, and on-the-go drinks." 
+                data-category="Tumblers"
+                data-capacity="300ml - 750ml"
+                data-material="Pet (Polyethylene Terephthalate)"
+                data-finish="Screw Lid / Flip Top / Straw Lid"
+                data-color="custom colors , blue , brown , red , green and black"
+                data-price="24.99$"
+                data-pdf-link="/specs/storage-container-5l.pdf">
+          <span class="petbot-span">PET</span>
+           <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PET/11.png" alt="Storage Container">
+                </div>
+                <div class="pack-card-info-panel">
+          <a href="./product detail/BPA-Free PET Travel Mug for Hot  Cold Drinks.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                  <span class="pack-category-tag">TRAVEL MUG</span>
+                    <h3 class="pack-product-main-name">BPA-Free PET Travel Mug for Hot & Cold Drinks</h3>
+                    <span class="price">24.99$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card dispensors all" 
+                data-title="Durable PP Travel Mugs" 
+                data-desc="Use: Perfect for tea, coffee, water, juices, and smoothies" 
+                data-category="Tumblers"
+                data-capacity="250ml - 750ml"
+                data-material="PP (Polypropylene)"
+                data-finish="Screw Lid / Flip Top / Leak-Proof Cap"
+                data-color="White, Transparent, Black, Natural, and Custom colors"
+                data-price="12.99$"
+                data-pdf-link="/specs/foaming-dispenser-300ml.pdf"> 
+          <span class="petbot-span">PP</span>
+                <!-- <span class="pack-new-product-label">NEW</span> -->
+                <div class="pack-card-image-box">
+                    <img src="../gallery/gallery_photo/PP/11.png" alt="Dispenser Pump">
+                </div>
+                <div class="pack-card-info-panel">
+        <a href="./product detail/Lightweight PP Tumbler for Daily Use.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+                    <span class="pack-category-tag">TRAVEL MUG</span>
+                    <h3 class="pack-product-main-name">Lightweight PP Tumbler for Daily Use</h3>
+                    <span class="price">12.99$</span>
+                </div>
+            </div>
+
+            <div class="pack-unit-card dispensors all" 
+                data-title="Elegant PC Travel Mug with Flip Lid." 
+                data-desc="Use: Ideal for coffee, tea, water, smoothies, protein shakes, and travel drinks" 
+                data-category="Tumblers"
+                data-capacity="500ml - 1L"
+                data-material="PC (Polycarbonate)"
+                data-finish="Screw Lid / Flip Top / Straw Lid"
+                data-color="Transparent, Clear, White, Black, and Custom options"
+                data-price="19.50$"
+                data-pdf-link="/specs/flip-top-cap.pdf"> 
+          <span class="petbot-span">PC</span>
+                <div class="pack-card-image-box">
+                    <img src="./gallery_photo/PC/11.png" alt="Flip Top Cap">
+                </div>
+                <div class="pack-card-info-panel">
+        <a href="./product detail/High-Strength PC Tumbler for Hot  Cold Beverages.docx" class="petbot-arrow"><i class="fa-solid fa-download"></i></a>
+      <span class="pack-category-tag">TREAVEL MUG</span>
+                    <h3 class="pack-product-main-name">High-Strength PC Tumbler for Hot & Cold Beverages</h3>
+                    <span class="price">19.50$</span>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <div id="packProductOverlay" class="pack-modal-overlay">
+        <div class="pack-product-detail-modal">
+            <button id="packCloseModalBtn" class="pack-modal-close-button">&times;</button>
+            <div class="pack-modal-image-panel">
+                <img id="packExpandedProductImg" src="" alt="Expanded Product Image">
+            </div>
+            <div class="pack-modal-content-area">
+                <h2 id="packModalTitle">Product Title</h2>
+                <p id="packModalDescription">Product Description</p>
+                
+                <div class="pack-product-specs-box">
+                    <h3>Specifications</h3>
+                    <dl>
+                        <dt>Capacity:</dt><dd id="packSpecCapacity"></dd>
+                        <dt>Neck Finish:</dt><dd id="packSpecFinish"></dd>
+                        <dt>Material:</dt><dd id="packSpecMaterial"></dd>
+                        <dt>Available Colors:</dt><dd id="packSpecColor"></dd>
+                        <dt>Price:</dt><dd id="packPrice"></dd>
+
+                    </dl>
+                </div>
+                <div class="pack-modal-action-group">
+                    <!-- <a href="#" id="packDownloadPdfButton" class="pack-download-spec-button" target="_blank">
+                        Download PDF Spec Sheet
+                    </a> -->
+                    <a href="#" class="pack-quote-button pack-modal-cta-btn">
+                        PUrchase Now &rarr; 
+                    </a>
+                </div>
+                </div>
+        </div>
+    </div>
+        </div>
+       
+    </main>
+
+    <div id="packProductOverlay" class="pack-modal-overlay">
+        <div class="pack-product-detail-modal">
+            <button id="packCloseModalBtn" class="pack-modal-close-button">&times;</button>
+            <div class="pack-modal-image-panel">
+                <img id="packExpandedProductImg" src="" alt="Expanded Product Image">
+            </div>
+            <div class="pack-modal-content-area">
+                <h2 id="packModalTitle">Product Title</h2>
+                <p id="packModalDescription">Product Description</p>
+                
+                <div class="pack-product-specs-box">
+                    <h3>Specifications</h3>
+                    <dl>
+                        <dt>Capacity:</dt><dd id="packSpecCapacity"></dd>
+                        <dt>Neck Finish:</dt><dd id="packSpecFinish"></dd>
+                        <dt>Material:</dt><dd id="packSpecMaterial"></dd>
+                        <dt>Available Colors:</dt><dd id="packSpecColor"></dd>
+                    </dl>
+                </div>
+                <div class="pack-modal-action-group">
+                    <a href="#" id="packDownloadPdfButton" class="pack-download-spec-button" target="_blank">
+                        Download PDF Spec Sheet
+                    </a>
+                    <a href="#" class="pack-quote-button pack-modal-cta-btn">
+                        Purchase Now &rarr; 
+                    </a>
+                </div>
+                </div>
+        </div>
+    </div>
+    
+        </div>
+
+     <!-- -----------------------------Footer--------------------------- -->
+    <footer>
+      <div class="newsletter">
+        <h3>Subscribe for New arrivals and discounts</h3>
+        <input type="email" placeholder="Your email address" />
+        <button>➤</button>
+      </div>
+
+      <div class="footer-grid footer">
+        <div>
+          <div class="footer-logo"><img src="../home_page/logo/petbot_logo.png" alt=""></div>
+          <p>
+           <i class="fa-solid fa-phone"></i> (0) 123456789<br/><i class="fa-solid fa-location-dot"></i>North Karachi <br/><i class="fa-solid fa-envelope"></i>name@yourmail.com
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-linkedin linkdin"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>MAIN</h4>
+          <ul>
+            <li><a href="../index.html">Home_page</a></li>
+            <li><a href="../aboutus/Aboutus.html">About_us</a></li>
+            <li><a href="../aside/aside.html">side_map</a></li>
+            <!-- <li><a href="#">Water Testing</a></li>
+            <li><a href="#">System Repair</a></li>
+            <li><a href="#">Water Testing</a></li> -->
+          </ul>
+            <h4>Get started</h4>
+          <ul>
+            <li><a href="../login/Singup.html">Sign_up</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <!-- <li><a href="./gallery/gallery_pp.html">Conatiners</a></li> -->
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../gallery/gallery_pc.html">Bottles</a></li>
+            <li><a href="../gallery/gallery_pet.html">Jars</a></li>
+            <li><a href="../gallery/gallery_pp.html">Conatiners</a></li>
+           
+          </ul>
+<h4>Contact</h4>
+          <ul>
+            <li><a href="../contactus/contactus.html">Contact_us</a></li>
+            <li><a href="../contactus/Queries.html">Queries</a></li>
+            <li><a href="../contactus/feedback.html">Feedback</a></li>
+           
+          </ul>
+        </div>
+
+        <div>
+          <h4>manufacturing process</h4>
+          <ul>
+            <li><a href="../fabrication/pc.html">PC (Polyethylene terephthalate)</a></li>
+            <li><a href="../fabrication/pp.html">PP (Polypropylene)</a></li>
+            <li><a href="../fabrication/pet.html">PET (Polyethylene terephthalate)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+  
+    </footer>
+
+
+
+<script>
+      
+   
+        document.addEventListener('DOMContentLoaded', () => {
+            // ==========================================================
+            // 1. SELECTORS
+            // ==========================================================
+            const cards = document.querySelectorAll('.pack-unit-card');
+            const overlay = document.getElementById('packProductOverlay');
+            const expandedImg = document.getElementById('packExpandedProductImg');
+            const expandedTitle = document.getElementById('packModalTitle');
+            const expandedDesc = document.getElementById('packModalDescription');
+            const closeBtn = document.getElementById('packCloseModalBtn');
+            const filterButtons = document.querySelectorAll('.pack-filter-action-button');
+            const downloadPdfBtn = document.getElementById('packDownloadPdfButton'); 
+
+            // Specifications elements
+            const specCapacity = document.getElementById('packSpecCapacity');
+            const specFinish = document.getElementById('packSpecFinish');
+            const specMaterial = document.getElementById('packSpecMaterial');
+            const specColor = document.getElementById('packSpecColor');
+            const specPrice = document.getElementById('packPrice');
+
+            
+            // --- Floating Particle Generation (Removed for brevity, as it requires HTML element) ---
+            /*
+            const heroParticles = document.getElementById('packHeroParticles');
+            if(heroParticles) {
+                const numParticles = 15;
+                for (let i = 0; i < numParticles; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('pack-particle-element');
+                    
+                    const size = Math.floor(Math.random() * 30) + 10; 
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    
+                    particle.style.left = `${Math.random() * 100}vw`;
+                    particle.style.top = `${Math.random() * 100}vh`;
+                    
+                    particle.style.animationDelay = `-${Math.random() * 15}s`;
+                    particle.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                    
+                    heroParticles.appendChild(particle);
+                }
+            }
+            */
+
+            // ==========================================================
+            // 2. MODAL LOGIC (CARD EXPANDING)
+            // ==========================================================
+            const closeOverlay = () => {
+                overlay.classList.remove('pack-active-modal');
+                document.body.classList.remove('pack-no-scroll'); 
+            };
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const imgSrc = card.querySelector('img').src;
+                    const title = card.getAttribute('data-title');
+                    const desc = card.getAttribute('data-desc');
+                    const pdfLink = card.getAttribute('data-pdf-link');
+
+                    // Retrieve detailed specifications from the card
+                    const capacity = card.getAttribute('data-capacity');
+                    const finish = card.getAttribute('data-finish');
+                    const material = card.getAttribute('data-material');
+                    const color = card.getAttribute('data-color');
+                    const price = card.getAttribute('data-price');
+
+                    expandedImg.src = imgSrc;
+                    expandedTitle.textContent = title;
+                    expandedDesc.textContent = desc;
+
+                    // Populate the specifications section
+                    specCapacity.textContent = capacity;
+                    specFinish.textContent = finish;
+                    specMaterial.textContent = material;
+                    specColor.textContent = color;
+                    specPrice.textContent = price || 'N/A'; // <-- added: populate modal price
+
+                    // Set the dynamic PDF link (guarded)
+                    if (downloadPdfBtn) downloadPdfBtn.href = pdfLink || '#';
+
+                    overlay.classList.add('pack-active-modal');
+                    document.body.classList.add('pack-no-scroll'); 
+                });
+            });
+            
+            closeBtn.addEventListener('click', closeOverlay);
+
+            overlay.addEventListener('click', (e) => {
+                // Only close if clicking on the backdrop (not the expanded card itself)
+                if (e.target === overlay) {
+                    closeOverlay();
+                }
+            });
+
+            // Allow closing with the Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('pack-active-modal')) {
+                    closeOverlay();
+                }
+            });
+
+            // ==========================================================
+            // 3. PRODUCT FILTERING FUNCTIONALITY
+            // ==========================================================
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter');
+
+                    filterButtons.forEach(btn => btn.classList.remove('pack-active-filter'));
+                    button.classList.add('pack-active-filter');
+
+                    cards.forEach((card, index) => {
+                        // Check if 'all' filter is active OR if the card contains the current filter class
+                        const isFiltered = (filterValue === 'all' || card.classList.contains(filterValue));
+                        
+                        if (isFiltered) {
+                            card.classList.remove('pack-hidden-item');
+                            // Reapply fade-in animation for filtered items (optional, but keeps style)
+                            card.style.opacity = 0;
+                            card.style.animation = `fadeIn 0.5s ease-out ${0.07 * index}s forwards`;
+                        } else {
+                            card.classList.add('pack-hidden-item');
+                            card.style.animation = 'none'; // Stop fade-in animation on hidden items
+                        }
+                    });
+                });
+            });
+
+            // ==========================================================
+            // 4. ANIMATION & INITIAL LOAD
+            // ==========================================================
+            // Function to apply staggered animations to a set of elements 
+            const applyStaggeredAnimation = (selector, animationName = 'fadeInUp', duration = '0.7s', delayStart = 0) => {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach((el, index) => {
+                    el.style.opacity = 0;
+                    // Calculate the total delay for a staggered effect
+                    const delay = (delayStart + 0.1 * index).toFixed(2);
+                    el.style.animation = `${animationName} ${duration} ease-out ${delay}s forwards`;
+                });
+            };
+
+            // Apply to header content area
+            applyStaggeredAnimation('.pack-hero-content-area h1', 'fadeInUp', '1.0s', 0.5);
+            applyStaggeredAnimation('.pack-hero-content-area p', 'fadeInUp', '1.0s', 0.6);
+            applyStaggeredAnimation('.pack-hero-button-group a', 'fadeInUp', '1.0s', 0.7);
+
+            // Initial Fade-In Animation for Cards
+            cards.forEach((el, index) => {
+                el.style.opacity = 0;
+                // Start card animation after header content is visible
+                el.style.animation = `fadeIn 0.5s ease-out ${1.0 + 0.07 * index}s forwards`; 
+            });
+
+        });
+</script>
+    <script src="../fabrication/fabrication.js"></script>
+    <script src="../home_page/script.js"></script>
+    <script src="./gallery.js"></script>
+</body>
+</html>

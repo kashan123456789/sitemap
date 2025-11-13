@@ -1,0 +1,437 @@
+/* ------------------all (universal selector)------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(180deg, #eaf6ff 0%, #f6fbff 60%);
+  color: #07203a;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Gradient Utilities */
+.pcb-gradient-blue {
+  background: linear-gradient(
+    135deg,
+    hsl(210, 85%, 45%) 0%,
+    hsl(200, 90%, 55%) 50%,
+    hsl(190, 95%, 65%) 100%
+  );
+}
+/* .pcb-gradient-blue-soft {
+  background: linear-gradient(
+    180deg,
+    hsla(210, 85%, 45%, 0.1) 0%,
+    hsla(190, 95%, 65%, 0.05) 100%
+  );
+} */
+
+/* Glass Card */
+.pcb-glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(210, 230, 245, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Shadows */
+.pcb-shadow-soft {
+  box-shadow: 0 10px 40px -10px rgba(200, 220, 235, 0.5);
+}
+.pcb-shadow-medium {
+  box-shadow: 0 20px 60px -15px rgba(200, 220, 235, 0.7);
+}
+
+/* Container */
+.pcb-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.pcb-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pcb-hero-gradient {
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+.pcb-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;base64,...");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+.pcb-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 6rem 0;
+  color: white;
+}
+.pcb-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+.pcb-tagline {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+.pcb-subtitle {
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1e293b;
+}
+
+/* About */
+.pcb-about-text {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #64748b;
+  line-height: 1.8;
+}
+.pcb-about-text p {
+  margin-bottom: 1rem;
+}
+
+/* Properties Grid */
+.pcb-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.pcb-property-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+}
+.pcb-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.pcb-property-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+.pcb-property-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Features */
+.pcb-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.pcb-feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.pcb-feature-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, hsl(210, 85%, 45%), hsl(200, 90%, 55%));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.pcb-feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+.pcb-feature-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* History */
+.pcb-history-container {
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+.pcb-timeline {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+.pcb-timeline-item {
+  border-left: 4px solid;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+.pcb-timeline-item:nth-child(odd) {
+  border-color: hsl(210, 85%, 45%);
+}
+.pcb-timeline-item:nth-child(even) {
+  border-color: hsl(195, 90%, 55%);
+}
+.pcb-timeline-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.pcb-timeline-item:nth-child(odd) .pcb-timeline-date {
+  color: hsl(210, 85%, 45%);
+}
+.pcb-timeline-item:nth-child(even) .pcb-timeline-date {
+  color: hsl(195, 90%, 55%);
+}
+.pcb-timeline-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+.pcb-timeline-item p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Image */
+.pcb-image-container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.pcb-product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.pcb-product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.pcb-product-image img:hover {
+  transform: scale(1.05);
+}
+.pcb-image-caption {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+}
+
+/* Footer */
+.pcb-footer {
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  padding: 2rem 0;
+  text-align: center;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pcb-hero h1 {
+    font-size: 2.5rem;
+  }
+  .pcb-tagline {
+    font-size: 1.25rem;
+  }
+  .pcb-subtitle {
+    font-size: 1rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  .pcb-properties-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .pcb-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .pcb-history-container {
+    padding: 2rem 1.5rem;
+  }
+  section {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .pcb-hero h1 {
+    font-size: 2rem;
+  }
+  .pcb-properties-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Hero Video */
+.pcb-hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+filter: brightness(30%);
+}
+
+/* Ensure gradient/content stays above */
+.pcb-hero-gradient {
+  z-index: 1;
+}
+.pcb-hero-content {
+  z-index: 2;
+  position: relative;
+}
+
+/* ================= VIDEO MEDIA QUERIES ================= */
+
+/* Tablets */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .pcb-hero-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 767px) {
+  .pcb-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .pcb-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+        /* Unique container */
+.search-container-uni123 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Unique search button (icon) */
+.search-icon-uni123 {
+  background: #222;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.search-icon-uni123:hover {
+  background: #333;
+}
+
+/* Input hidden by default */
+#searchInput-uni123 {
+  width: 0;
+  opacity: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  margin-left: 8px;
+}
+
+/* Active state (when expanded) */
+#searchInput-uni123.active {
+  width: 200px;
+  opacity: 1;
+  background: #fff;
+  color: #000;
+}
+
+/* Gradient animation */
+.gradient-icon-uni123 {
+  background: linear-gradient(
+     60deg,
+        #00c6ff,
+        #0072ff,
+        #2e8bff,
+        #6bcfff,
+        #00c6ff,
+        #0072ff,
+        #00b4db,
+        #0083b0,
+        #4158d0,
+        #2b5876,
+        #4e4376,
+        #6a4c93
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove-uni123 5s ease infinite;
+}
+
+@keyframes gradientMove-uni123 {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+        
+.no .logo-uni123{
+  height: 140px;
+  width: 300px;
+  object-fit: contain;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 12px;
+}
